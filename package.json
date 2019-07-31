@@ -1,0 +1,25 @@
+{
+  "name": "ffbleaguemanager",
+  "version": "1.0.0",
+  "description": "Fantacy Football League",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rise-shine/FFBLeagueManager.git"
+  },
+  "keywords": [
+    "fantacy",
+    "football",
+    "league",
+    "manager"
+  ],
+  "author": "Troy, Amanda, Mike, Jake, Halon",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rise-shine/FFBLeagueManager/issues"
+  },
+  "homepage": "https://github.com/rise-shine/FFBLeagueManager#readme"
+}
