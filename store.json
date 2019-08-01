@@ -1,0 +1,154 @@
+{
+    "team": [
+        {
+            "id": "1",
+            "offence": [
+                {
+                    "qb1": "qb1",
+                    "qb2": "qb2"
+                },
+                {
+                    "rb1": "rb1",
+                    "rb2": "rb2",
+                    "rb3": "rb3",
+                    "rb4": "rb4"
+                },
+                {
+                    "wr1": "wr1",
+                    "wr2": "wr2",
+                    "wr3": "wr3",
+                    "wr4": "wr4",
+                    "wr5": "wr5",
+                    "wr6": "wr6"
+                }
+            ],
+            "defense": "defense",
+            "kicker": [
+                {
+                    "kick1": "kick1",
+                    "kick2": "kick2"
+                }
+            ]
+        },
+        {
+            "id": "2",
+            "offence": [
+                {
+                    "qb1": "qb1",
+                    "qb2": "qb2"
+                },
+                {
+                    "rb1": "rb1",
+                    "rb2": "rb2",
+                    "rb3": "rb3",
+                    "rb4": "rb4"
+                },
+                {
+                    "wr1": "wr1",
+                    "wr2": "wr2",
+                    "wr3": "wr3",
+                    "wr4": "wr4",
+                    "wr5": "wr5",
+                    "wr6": "wr6"
+                }
+            ],
+            "defense": "defense",
+            "kicker": [
+                {
+                    "kick1": "kick1",
+                    "kick2": "kick2"
+                }
+            ]
+        },
+        {
+            "id": "3",
+            "offence": [
+                {
+                    "qb1": "qb1",
+                    "qb2": "qb2"
+                },
+                {
+                    "rb1": "rb1",
+                    "rb2": "rb2",
+                    "rb3": "rb3",
+                    "rb4": "rb4"
+                },
+                {
+                    "wr1": "wr1",
+                    "wr2": "wr2",
+                    "wr3": "wr3",
+                    "wr4": "wr4",
+                    "wr5": "wr5",
+                    "wr6": "wr6"
+                }
+            ],
+            "defense": "defense",
+            "kicker": [
+                {
+                    "kick1": "kick1",
+                    "kick2": "kick2"
+                }
+            ]
+        },
+        {
+            "id": "4",
+            "offence": [
+                {
+                    "qb1": "qb1",
+                    "qb2": "qb2"
+                },
+                {
+                    "rb1": "rb1",
+                    "rb2": "rb2",
+                    "rb3": "rb3",
+                    "rb4": "rb4"
+                },
+                {
+                    "wr1": "wr1",
+                    "wr2": "wr2",
+                    "wr3": "wr3",
+                    "wr4": "wr4",
+                    "wr5": "wr5",
+                    "wr6": "wr6"
+                }
+            ],
+            "defense": "defense",
+            "kicker": [
+                {
+                    "kick1": "kick1",
+                    "kick2": "kick2"
+                }
+            ]
+        },
+        {
+            "id": "5",
+            "offence": [
+                {
+                    "qb1": "qb1",
+                    "qb2": "qb2"
+                },
+                {
+                    "rb1": "rb1",
+                    "rb2": "rb2",
+                    "rb3": "rb3",
+                    "rb4": "rb4"
+                },
+                {
+                    "wr1": "wr1",
+                    "wr2": "wr2",
+                    "wr3": "wr3",
+                    "wr4": "wr4",
+                    "wr5": "wr5",
+                    "wr6": "wr6"
+                }
+            ],
+            "defense": "defense",
+            "kicker": [
+                {
+                    "kick1": "kick1",
+                    "kick2": "kick2"
+                }
+            ]
+        }
+    ]
+}
