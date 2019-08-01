@@ -1,22 +1,34 @@
-import React from 'react'
-import { Grid } from '@material-ui/core';
-import News from "./News"
-
+import React, { Fragment } from "react";
+import { Grid, Paper, Typography, List } from "@material-ui/core";
+import ListItem from "@material-ui/core/ListItem";
+import ListItemText from "@material-ui/core/ListItemText";
 
 const style = {
-    Paper: { padding: 20, margin:10}
-}
+  Paper: { padding: 20, margin: 10 }
+};
 
-export default props =>
-    <Grid container>
-        <Grid item sm>
-            <News style={style}>
-                Left panel
-            </News>
-        </Grid>
-        <Grid item sm>
-            <News style={style}>
-                Right panel
-            </News>
-        </Grid>
+export default ({ players }) => (
+  <Grid container>
+    <Grid item sm>
+      <Paper style={style.Paper}>
+        {players.map(([sqaud, players]) => (
+          <Fragment>
+            <Typography style={{ textTransform: "capitalize" }}>
+              {sqaud}
+            </Typography>
+            <List component="ul">
+              {players.map(({title}) => (
+                <ListItem button>
+                  <ListItemText primary={title} />
+                </ListItem>
+              ))}
+            </List>
+          </Fragment>
+        ))}
+      </Paper>
     </Grid>
+    <Grid item sm>
+      <Paper style={style.Paper}>News</Paper>
+    </Grid>
+  </Grid>
+);
