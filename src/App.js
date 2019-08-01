@@ -1,14 +1,28 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component, Fragment } from "react";
 // import { BrowserRouter, Link, Route } from 'react-router-dom';
 // import Home from "./Home/Home";
-import Header from "./Layouts/Header";
-import Footer from './Layouts/Footer';
+
+import Footer from "./Layouts/Footer";
 // import News from './News/News';
-import Home from "./Layouts/Home"
+import Home from "./Layouts/Home";
+import { team, players } from "./team";
+import Navbar from "./Home/Navbar/Navbar";
 
 export default class App extends Component {
   state = {
-    team : []
+    players
+  };
+
+  getHomeByTeam() {
+    return Object.entries(
+      this.state.players.reduce((players, player) => {
+        const { team } = player;
+
+        players[team] = players[team] ? [...players[team], player] : [player];
+
+        return players;
+      }, {})
+    );
   }
 
   // async componentDidMount() {
@@ -16,14 +30,16 @@ export default class App extends Component {
 
   //   this.setState(team);
   // }
-  
-  render() {
-    return (
 
+  render() {
+    const players = this.getHomeByTeam();
+    return (
       <Fragment>
-        <Header />
-        <Home />
-        <Footer />
+        <Navbar />
+
+        <Home players={players} />
+
+        <Footer team={team} />
       </Fragment>
       // <BrowserRouter>
       //    <Fragment>
@@ -44,8 +60,6 @@ export default class App extends Component {
       //   <Route exact path="/" render={() => <div>Schedule/ Roster</div>} />
       // </Fragment>
       // </BrowserRouter>
-   
-    )
+    );
   }
 }
-
