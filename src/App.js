@@ -1,6 +1,10 @@
 import React, { Component, Fragment } from 'react';
-import { BrowserRouter, Link, Route } from 'react-router-dom';
-import Home from "./Home/Home";
+// import { BrowserRouter, Link, Route } from 'react-router-dom';
+// import Home from "./Home/Home";
+import Header from "./Layouts/Header";
+import Footer from './Layouts/Footer';
+// import News from './News/News';
+import Home from "./Layouts/Home"
 
 export default class App extends Component {
   state = {
@@ -15,25 +19,31 @@ export default class App extends Component {
   
   render() {
     return (
-      <BrowserRouter>
-         <Fragment>
-        <ul>
-          <li>
-            <Link to="/"><Home/></Link>
-          </li>
-          <li>
-            <Link to="/roster">Roster</Link>
-          </li>
-          <li>
-            <Link to="/schedule">Schedule/ Rank</Link>
-          </li>
-        </ul>
 
-        <Route exact path="/" render={() => <div>Home</div>} />
-        <Route exact path="/" render={() => <div>Roster</div>} />
-        <Route exact path="/" render={() => <div>Schedule/ Roster</div>} />
+      <Fragment>
+        <Header />
+        <Home />
+        <Footer />
       </Fragment>
-      </BrowserRouter>
+      // <BrowserRouter>
+      //    <Fragment>
+      //   <ul>
+      //     <li>
+      //       <Link to="/"><Home/></Link>
+      //     </li>
+      //     <li>
+      //       <Link to="/roster">Roster</Link>
+      //     </li>
+      //     <li>
+      //       <Link to="/schedule">Schedule/ Rank</Link>
+      //     </li>
+      //   </ul>
+
+      //   <Route exact path="/" render={() => <div>Home</div>} />
+      //   <Route exact path="/" render={() => <div>Roster</div>} />
+      //   <Route exact path="/" render={() => <div>Schedule/ Roster</div>} />
+      // </Fragment>
+      // </BrowserRouter>
    
     )
   }
