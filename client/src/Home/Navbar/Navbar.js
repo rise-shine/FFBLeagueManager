@@ -136,8 +136,9 @@ export default function PrimarySearchAppBar() {
           </Typography>
 
           <div className={classes.grow} />
-          <p>Schedule/ Ranking</p>
+
           <div className={classes.sectionDesktop}>
+            <p>Schedule/ Ranking</p>
             <IconButton aria-label="show 4 new mails" color="inherit">
               <TrendingIcon />
             </IconButton>
