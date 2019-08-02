@@ -109,7 +109,7 @@ export default function PermanentDrawerLeft() {
         <Divider />
         <List>
             
-          {['Offense', 'Defrense', 'Kicker'].map((text, index) => (
+          {['Offense', 'Defense', 'Kicker'].map((text, index) => (
             <ListItem button key={text}>
                 
               <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>

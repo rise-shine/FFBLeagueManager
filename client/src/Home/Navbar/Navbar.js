@@ -132,7 +132,7 @@ export default function PrimarySearchAppBar() {
             <MenuIcon />
           </IconButton>
           <Typography className={classes.title} variant="h6" noWrap>
-            Fantacy Football League
+            Fantasy Football League
           </Typography>
 
           <div className={classes.grow} />
