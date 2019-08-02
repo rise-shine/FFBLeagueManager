@@ -2,7 +2,7 @@
     "team": [
         {
             "id": "1",
-            "offence": [
+            "offense": [
                 {
                     "qb1": "qb1",
                     "qb2": "qb2"
@@ -32,7 +32,7 @@
         },
         {
             "id": "2",
-            "offence": [
+            "offense": [
                 {
                     "qb1": "qb1",
                     "qb2": "qb2"
@@ -62,7 +62,7 @@
         },
         {
             "id": "3",
-            "offence": [
+            "offense": [
                 {
                     "qb1": "qb1",
                     "qb2": "qb2"
@@ -92,7 +92,7 @@
         },
         {
             "id": "4",
-            "offence": [
+            "offense": [
                 {
                     "qb1": "qb1",
                     "qb2": "qb2"
@@ -122,7 +122,7 @@
         },
         {
             "id": "5",
-            "offence": [
+            "offense": [
                 {
                     "qb1": "qb1",
                     "qb2": "qb2"
