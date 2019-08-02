@@ -6,7 +6,7 @@ export default props =>
 <AppBar position="static" color="primary">
 <Toolbar>
     <Typography variant= "headline" color= "inherit">
-        Fantacy Football League
+        Fantasy Football League
     </Typography>
 
 </Toolbar>

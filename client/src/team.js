@@ -1,5 +1,5 @@
 export const team= [
-    "Quarter-backs", "Running-backs", "Wide-recievers", "Defense", "Kickers"
+    "Quarter-backs", "Running-backs", "Wide-receivers", "Defense", "Kickers"
 ]
 
 export const players = [
@@ -7,7 +7,7 @@ export const players = [
         "id": "qb",
         "qb1": "qb1",
         "qb2": "qb2",
-        "team": "Quater-backs"
+        "team": "Quarter-backs"
     },
     {
         "id": "rb",
@@ -23,7 +23,7 @@ export const players = [
         "wr4": "wr4",
         "wr5": "wr5",
         "wr6": "wr6",
-        "team": "Wide-reciever"
+        "team": "Wide-receiver"
     },
     {
         "id": "D",

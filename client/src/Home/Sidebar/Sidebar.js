@@ -13,6 +13,7 @@ import ListItemText from '@material-ui/core/ListItemText';
 import InboxIcon from '@material-ui/icons/MoveToInbox';
 import MailIcon from '@material-ui/icons/Mail';
 import Bench from "./SidebarComponents/Bench";
+import '../Sidebar/Sidebar.css'
 
 const drawerWidth = 240;
 
