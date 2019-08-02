@@ -98,7 +98,7 @@ export default function PrimarySearchAppBar() {
         <IconButton aria-label="show 4 new mails" color="inherit">
           <TrendingIcon />
         </IconButton>
-        <p>Schedule/ Ranking</p>
+        <p>Schedule/Ranking</p>
       </MenuItem>
       <MenuItem>
         <IconButton aria-label="show 11 new notifications" color="inherit">
@@ -139,15 +139,15 @@ export default function PrimarySearchAppBar() {
           <div className={classes.grow} />
 
           <div className={classes.sectionDesktop}>
-            <p>Schedule/ Ranking</p>
-            <IconButton aria-label="show 4 new mails" color="inherit">
+            <p id="scheduleText">Schedule/Ranking</p>
+            <IconButton aria-label="show 4 new mails" color="inherit" id="trendingIcon">
               <TrendingIcon />
             </IconButton>
-            <p>Roster</p>
-            <IconButton aria-label="show 17 new notifications" color="inherit">
+            <p id="rosterText">Roster</p>
+            <IconButton aria-label="show 17 new notifications" color="inherit" id="favoriteIcon">
               <FavoriteIcon />
             </IconButton>
-            <p>Profile</p>
+            <p id="idText">Profile</p>
             <IconButton
               edge="end"
               aria-label="account of current user"
@@ -155,6 +155,7 @@ export default function PrimarySearchAppBar() {
               aria-haspopup="true"
               onClick={handleProfileMenuOpen}
               color="inherit"
+              id="profileIcon"
             >
               <AccountCircle />
             </IconButton>
