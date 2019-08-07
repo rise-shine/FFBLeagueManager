@@ -49,7 +49,7 @@ export default function ControlledOpenSelect() {
           value={age}
           onChange={handleChange}
           inputProps={{
-            name: 'Quater-back',
+            name: 'Quarter-back',
             id: 'demo-controlled-open-select',
           }}
         >
@@ -73,7 +73,7 @@ export default function ControlledOpenSelect() {
           value={age}
           onChange={handleChange}
           inputProps={{
-            name: 'Quater-back',
+            name: 'Quarter-back',
             id: 'demo-controlled-open-select',
           }}
         >
