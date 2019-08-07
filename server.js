@@ -1,5 +1,5 @@
 const express = require("express");
-// const routes = require("./controllers"); - not being used right now. need to comment this back in later.
+const routes = require("./controllers");
 const app = express();
 const PORT = process.env.PORT || 3001;
 var db = require("./models");
@@ -14,7 +14,7 @@ if (process.env.NODE_ENV === "production") {
 }
 
 // Adding routes
-// app.use(routes); - not being used right now. need to comment this back in later.
+app.use(routes);
 
 // Connecting to the DB and starting the server
 db.sequelize.sync().then(() => {
