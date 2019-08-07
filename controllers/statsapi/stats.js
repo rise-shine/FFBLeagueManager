@@ -21,7 +21,7 @@ router.get("/gamestates", function(req, res) {
   })
     .then(function(response) {
       const statistics = response.data.dailyplayerstats.playerstatsentry;
-      db.ffbdata
+      db.playerstats
         .create({
           PlayerID: Sequelize.PlayerID,
           GameWeek: statistics.GameWeek,
