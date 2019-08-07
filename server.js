@@ -1,7 +1,8 @@
 const express = require("express");
-// const routes = require("./controllers"); - not being used right now. need to comment this back in later.
+const routes = require("./controllers");
 const app = express();
 const PORT = process.env.PORT || 3001;
+<<<<<<< HEAD
 // var db = require("./models"); - not being used right now. need to comment this back in later.
 ///////////////////////////////////////////////////////////
 //For scraping the news 
@@ -25,6 +26,9 @@ axios.get('https://sports.yahoo.com/nfl/').then((response) => {
   }
 })
 ///////////////////////////////////////////////////////////////
+=======
+var db = require("./models");
+>>>>>>> 2be5aeed51132d75d16292ac4b4a56ba4953d3b2
 
 // Defining middleware
 app.use(express.urlencoded({ extended: true }));
@@ -36,12 +40,16 @@ if (process.env.NODE_ENV === "production") {
 }
 
 // Adding routes
-// app.use(routes); - not being used right now. need to comment this back in later.
+app.use(routes);
 
 // Connecting to the DB and starting the server
-// db.sequelize.sync().then(() => {
+db.sequelize.sync().then(() => {
   app.listen(PORT, () => {
     console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`);
   });
+<<<<<<< HEAD
 // }); - DB is not being used right now. need to comment this back in later.
 
+=======
+});
+>>>>>>> 2be5aeed51132d75d16292ac4b4a56ba4953d3b2
