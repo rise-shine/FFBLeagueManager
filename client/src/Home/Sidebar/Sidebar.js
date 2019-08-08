@@ -14,6 +14,7 @@ import MailIcon from '@material-ui/icons/Mail';
 import Bench from "./SidebarComponents/Bench";
 import '../Sidebar/Sidebar.css'
 
+
 const drawerWidth = 240;
 
 const useStyles = makeStyles(theme => ({
@@ -52,6 +53,7 @@ export default function PermanentDrawerLeft() {
         }}
         anchor="left"
       >
+  
         <div className={classes.toolbar} />
         <Divider />
         <List>
