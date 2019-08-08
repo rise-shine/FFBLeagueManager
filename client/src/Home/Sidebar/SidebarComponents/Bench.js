@@ -1,40 +1,36 @@
-import React, { Fragment } from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import InputLabel from '@material-ui/core/InputLabel';
-import MenuItem from '@material-ui/core/MenuItem';
-import FormControl from '@material-ui/core/FormControl';
-import Select from '@material-ui/core/Select';
-import Button from '@material-ui/core/Button';
+import React from "react";
+import FormGroup from "@material-ui/core/FormGroup";
+import FormControlLabel from "@material-ui/core/FormControlLabel";
+import Switch from "@material-ui/core/Switch";
 
-const useStyles = makeStyles(theme => ({
-  button: {
-    display: 'block',
-    marginTop: theme.spacing(2),
-  },
-  formControl: {
-    margin: theme.spacing(1),
-    minWidth: 120,
-  },
-}));
+export default function SwitchLabels() {
+  const [state, setState] = React.useState(true);
 
-export default function ControlledOpenSelect() {
-  const classes = useStyles();
-  const [age, setAge] = React.useState('');
-  const [open, setOpen] = React.useState(false);
-
-  function handleChange(event) {
-    setAge(event.target.value);
-  }
-
-  function handleClose() {
-    setOpen(false);
-  }
-
-  function handleOpen() {
-    setOpen(true);
-  }
+  const handleChange = name => event => {
+    setState(!state);
+  };
 
   return (
+    <FormGroup>
+      <FormControlLabel
+        control={
+          <Switch checked={state} onChange={handleChange("qb1")} value="qb1" />
+        }
+        label="Qb1"
+      />
+      <FormControlLabel
+        control={
+          <Switch
+            checked={!state}
+            onChange={handleChange("qb2")}
+            value="qb2"
+            color="primary"
+          />
+        }
+        label="Qb2"
+      />
+    </FormGroup>
+
       <Fragment>
     <form autoComplete="off">
       <Button className={classes.button} onClick={handleOpen}>
@@ -85,5 +81,6 @@ export default function ControlledOpenSelect() {
       </FormControl>   
     </form>
     </Fragment>
+
   );
 }

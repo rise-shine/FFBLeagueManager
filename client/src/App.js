@@ -7,8 +7,8 @@ import Footer from './Layouts/Footer';
 import Home from "./Layouts/Home";
 import {team , players } from "./team";
 import Navbar from "./Home/Navbar/Navbar";
-import Sidebar from "./Home/Sidebar/Sidebar"
-
+//import Sidebar from "./Home/Sidebar/Sidebar"
+import Drawer from "./Home/Drawer"
 
 export default class App extends Component {
   state = {
@@ -43,7 +43,7 @@ export default class App extends Component {
         
         <Home 
         players = {players}/>
-        <Sidebar/>
+        <Drawer/>
         <Footer 
           team={team}
         />
