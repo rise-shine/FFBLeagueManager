@@ -8,7 +8,9 @@ const buf = Buffer.from(
 const key = buf.toString("base64");
 
 // route for pulling stats from api and writing them to the database
-router.get("/gamestates", function(req, res) {
+router.get("/stats", function(req, res) {
+  console.log("gamestats route");
+
   axios({
     //this returns stats for all players for a specific date
     method: "GET",
@@ -18,9 +20,11 @@ router.get("/gamestates", function(req, res) {
     headers: {
       Authorization: "Basic " + key
     }
-  })
+  })}
     .then(function(response) {
-      const statistics = response.data.dailyplayerstats.playerstatsentry;
+      console.log(response);
+    }
+     /* const statistics = response.data.dailyplayerstats.playerstatsentry;
       db.playerstats
         .create({
           PlayerID: Sequelize.PlayerID,
@@ -70,4 +74,4 @@ router.get("/gamestates", function(req, res) {
     .catch(function(error) {
       console.log(error);
     });
-});
+});*/
