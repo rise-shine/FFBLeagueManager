@@ -13,8 +13,8 @@ export default ({team}) =>
         centered
       >
           <Tab label= "All" />
-          {team.map(sqaud =>
-            <Tab label= {sqaud} />
+          {team.map(squad =>
+            <Tab label= {squad} />
             )}
         
        
