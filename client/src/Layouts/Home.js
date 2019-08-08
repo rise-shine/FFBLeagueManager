@@ -11,10 +11,10 @@ export default ({ players }) => (
   <Grid container>
     <Grid item sm>
       <Paper style={style.Paper}>
-        {players.map(([sqaud, players]) => (
+        {players.map(([squad, players]) => (
           <Fragment>
             <Typography style={{ textTransform: "capitalize" }}>
-              {sqaud}
+              {squad}
             </Typography>
             <List component="ul">
               {players.map(({title}) => (
