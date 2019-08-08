@@ -14,7 +14,10 @@ export default function SwitchLabels() {
     <FormGroup>
       <FormControlLabel
         control={
-          <Switch checked={state} onChange={handleChange("qb1")} value="qb1" />
+          <Switch 
+          checked={state}
+           onChange={handleChange("qb1")} 
+           value="qb1" />
         }
         label="Qb1"
       />
