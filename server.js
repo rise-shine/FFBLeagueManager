@@ -6,25 +6,27 @@ const PORT = process.env.PORT || 3001;
 // var db = require("./models"); - not being used right now. need to comment this back in later.
 ///////////////////////////////////////////////////////////
 //For scraping the news 
-const cheerio = require('cheerio')
-const axios = require('axios')
+// const cheerio = require('cheerio')
+// const axios = require('axios')
 
-axios.get('https://sports.yahoo.com/nfl/').then((response) => {
-  const $ = cheerio.load(response.data)
-  //THIS SELECTOR NEEDS TO BE TWEAKED THIS IS JUST THE BASED CODE
-  const urlElems = $('li')
+// axios.get('https://sports.yahoo.com/nfl/').then((response) => {
+//   const $ = cheerio.load(response.data)
+//   //THIS SELECTOR NEEDS TO BE TWEAKED THIS IS JUST THE BASED CODE
+//   const urlElems = $('li')
     
-  for (let i = 0; i < urlElems.length; i++) {
-    const urlSpan = $(urlElems[i]).find('a')[0]
+//   for (let i = 0; i < urlElems.length; i++) {
+//     const urlSpan = $(urlElems[i]).find('a')[0]
 
-    if (urlSpan) {
-      const urlText = $(urlSpan).text()
-      // We then print the text on to the console
-      console.log(urlText)
-    }
-    else(console.log("Didn't work"))
-  }
-})
+//     if (urlSpan) {
+//       const urlText = $(urlSpan).text().slice('Yahoo Sports')
+//       // We then print the text on to the console
+//       console.log(urlText)
+//     }
+//     else(console.log("Didn't work"))
+//   }
+  
+// });
+
 ///////////////////////////////////////////////////////////////
 
 var db = require("./models");
