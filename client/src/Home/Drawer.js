@@ -24,6 +24,7 @@ import AccountCircle from "@material-ui/icons/AccountCircle";
 import MoreIcon from "@material-ui/icons/MoreVert";
 import TrendingIcon from "@material-ui/icons/TrendingUp";
 import FavoriteIcon from "@material-ui/icons/Portrait";
+import { Link } from "react-router-dom";
 
 
 const drawerWidth = 240;
@@ -177,13 +178,16 @@ export default function PersistentDrawerLeft() {
           <TrendingIcon />
         </IconButton>
         <p>Schedule/Ranking</p>
-      </MenuItem>
+      </MenuItem>  
       <MenuItem>
         <IconButton aria-label="show 11 new notifications" color="inherit">
           <FavoriteIcon />
         </IconButton>
-        <p>Roster</p>
+        <Link to="/roster" className={window.location.pathname === "/roster" ? "nav-link active" : "nav-link"}>
+          <p>Roster</p>
+        </Link>
       </MenuItem>
+      
       <MenuItem onClick={handleProfileMenuOpen}>
         <IconButton
           aria-label="account of current user"
@@ -220,7 +224,7 @@ export default function PersistentDrawerLeft() {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" noWrap>
-           Fantacy Football League
+           Fantasy Football League
           </Typography>
         
 
@@ -228,10 +232,12 @@ export default function PersistentDrawerLeft() {
 
           <div className={classes.sectionDesktop}>
             <p id="scheduleText">Schedule/Ranking</p>
-            <IconButton aria-label="show 4 new mails" color="inherit" id="trendingIcon">
-              <TrendingIcon />
-            </IconButton>
-            <p id="rosterText">Roster</p>
+              <IconButton aria-label="show 4 new mails" color="inherit" id="trendingIcon">
+                <TrendingIcon />
+              </IconButton>
+            <Link to="/roster" className={window.location.pathname === "/roster" ? "nav-link active" : "nav-link"}>
+              <p id="rosterText">Roster</p>
+            </Link>
             <IconButton aria-label="show 17 new notifications" color="inherit" id="favoriteIcon">
               <FavoriteIcon />
             </IconButton>
@@ -286,7 +292,7 @@ export default function PersistentDrawerLeft() {
               <ListItemText primary={text} />
             </ListItem>
           ))}
-          {["Quater-back"].map((text, index) =>(
+          {["Quarter-back"].map((text, index) =>(
             <ListItem button key = {text}>
               <ListItemText primary={text}/>
             </ListItem>
@@ -298,7 +304,7 @@ export default function PersistentDrawerLeft() {
             </ListItem>
           ))}
           <Bench/>
-          {["Wide-reciever"].map((text, index) =>(
+          {["Wide-receiver"].map((text, index) =>(
             <ListItem button key = {text}>
               <ListItemText primary={text}/>
             </ListItem>

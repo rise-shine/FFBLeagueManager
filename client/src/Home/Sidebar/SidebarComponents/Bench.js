@@ -11,6 +11,8 @@ export default function SwitchLabels() {
   };
 
   return (
+
+
     <FormGroup>
       <FormControlLabel
         control={
@@ -31,56 +33,6 @@ export default function SwitchLabels() {
       />
     </FormGroup>
 
-      <Fragment>
-    <form autoComplete="off">
-      <Button className={classes.button} onClick={handleOpen}>
-        
-      </Button>
-      <FormControl className={classes.formControl}>
-        <InputLabel htmlFor="demo-controlled-open-select">Quarter-back</InputLabel>
-        <Select
-          open={open}
-          onClose={handleClose}
-          onOpen={handleOpen}
-          value={age}
-          onChange={handleChange}
-          inputProps={{
-            name: 'Quarter-back',
-            id: 'demo-controlled-open-select',
-          }}
-        >
-         
-          <MenuItem value={1}>QB1</MenuItem>
-          <MenuItem value={2}>QB2</MenuItem>
-          
-        </Select>
-      </FormControl>   
-    </form>
-    <form autoComplete="off">
-      <Button className={classes.button} onClick={handleOpen}>
-        
-      </Button>
-      <FormControl className={classes.formControl}>
-        <InputLabel htmlFor="demo-controlled-open-select">Quarter-back</InputLabel>
-        <Select
-          open={open}
-          onClose={handleClose}
-          onOpen={handleOpen}
-          value={age}
-          onChange={handleChange}
-          inputProps={{
-            name: 'Quarter-back',
-            id: 'demo-controlled-open-select',
-          }}
-        >
-         
-          <MenuItem value={1}>QB1</MenuItem>
-          <MenuItem value={2}>QB2</MenuItem>
-          
-        </Select>
-      </FormControl>   
-    </form>
-    </Fragment>
-
+    
   );
 }
