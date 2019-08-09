@@ -1,14 +1,20 @@
 import React, { Component, Fragment } from 'react';
-// import { BrowserRouter, Link, Route } from 'react-router-dom';
-// import Home from "./Home/Home";
-
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Footer from './Layouts/Footer';
 // import News from './News/News';
 import Home from "./Layouts/Home";
+import Roster from "./Layouts/Roster";
 import {team , players } from "./team";
+<<<<<<< HEAD
+import Navbar from "./Home/Navbar/Navbar";
+// import Sidebar from "./Home/Sidebar/Sidebar"
+import Drawer from "./Home/Drawer";
+import Schedule from "./Layouts/Schedule";
+=======
 
 //import Sidebar from "./Home/Sidebar/Sidebar"
 import Drawer from "./Home/Drawer"
+>>>>>>> master
 
 export default class App extends Component {
   state = {
@@ -28,16 +34,49 @@ export default class App extends Component {
     )
   }
 
-  // async componentDidMount() {
-  //   const team = await(await fetch("http://localhost:3004/team")).json
+  async componentDidMount() {
+    const team = await(await fetch("http://localhost:3004/team")).json
 
-  //   this.setState(team);
-  // }
+    this.setState(team);
+  }
   
   render() {
     const players = this.getHomeByTeam()
     return (
 
+<<<<<<< HEAD
+
+      <Router>
+      <div>
+        <Navbar />
+        <Switch>
+          <Route exact path="/"
+          render={props => (
+              <Home
+                {...props}
+                players = {players}
+              />
+          )}
+          />
+          <Route exact path="/roster" component={Roster}/>
+          <Route exact path="/schedule" component={Schedule}/>
+        </Switch>
+        <Drawer/>
+        <Footer team={team}/>
+      </div>
+    </Router>
+
+      // <Fragment>
+      //   <Navbar/>
+        
+      //   <Home 
+      //   players = {players}/>
+      //   <Drawer/>
+      //   <Footer 
+      //     team={team}
+      //   />
+      // </Fragment>
+=======
       <Fragment>
        
          <Drawer/>
@@ -48,6 +87,7 @@ export default class App extends Component {
           team={team}
         />
       </Fragment>
+>>>>>>> master
       // <BrowserRouter>
       //    <Fragment>
       //   <ul>

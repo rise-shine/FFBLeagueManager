@@ -26,6 +26,7 @@ import AccountCircle from "@material-ui/icons/AccountCircle";
 import MoreIcon from "@material-ui/icons/MoreVert";
 import TrendingIcon from "@material-ui/icons/TrendingUp";
 import FavoriteIcon from "@material-ui/icons/Portrait";
+import { Link } from "react-router-dom";
 
 const drawerWidth = 240;
 
@@ -175,13 +176,16 @@ export default function PersistentDrawerLeft() {
           <TrendingIcon />
         </IconButton>
         <p>Schedule/Ranking</p>
-      </MenuItem>
+      </MenuItem>  
       <MenuItem>
         <IconButton aria-label="show 11 new notifications" color="inherit">
           <FavoriteIcon />
         </IconButton>
-        <p>Roster</p>
+        <Link to="/roster" className={window.location.pathname === "/roster" ? "nav-link active" : "nav-link"}>
+          <p>Roster</p>
+        </Link>
       </MenuItem>
+      
       <MenuItem onClick={handleProfileMenuOpen}>
         <IconButton
           aria-label="account of current user"
@@ -198,6 +202,59 @@ export default function PersistentDrawerLeft() {
   return (
     <div className={classes.root}>
       <CssBaseline />
+<<<<<<< HEAD
+  
+  
+      <div className={classes.grow}>
+      <AppBar
+        position="fixed"
+        className={clsx(classes.appBar, {
+          [classes.appBarShift]: open,
+        })}
+      >
+        <Toolbar>
+          <IconButton
+            color="inherit"
+            aria-label="open drawer"
+            onClick={handleDrawerOpen}
+            edge="start"
+            className={clsx(classes.menuButton, open && classes.hide)}
+          >
+            <MenuIcon />
+          </IconButton>
+          <Typography variant="h6" noWrap>
+           Fantasy Football League
+          </Typography>
+        
+
+          <div className={classes.grow} />
+
+          <div className={classes.sectionDesktop}>
+            <p id="scheduleText">Schedule/Ranking</p>
+              <IconButton aria-label="show 4 new mails" color="inherit" id="trendingIcon">
+                <TrendingIcon />
+              </IconButton>
+            <Link to="/roster" className={window.location.pathname === "/roster" ? "nav-link active" : "nav-link"}>
+              <p id="rosterText">Roster</p>
+            </Link>
+            <IconButton aria-label="show 17 new notifications" color="inherit" id="favoriteIcon">
+              <FavoriteIcon />
+            </IconButton>
+            <p id="idText">Profile</p>
+            <IconButton
+              edge="end"
+              aria-label="account of current user"
+              aria-controls={menuId}
+              aria-haspopup="true"
+              onClick={handleProfileMenuOpen}
+              color="inherit"
+              id="profileIcon"
+            >
+              <AccountCircle />
+            </IconButton>
+          </div>
+          <div className={classes.sectionMobile}>
+=======
 
       <div className={classes.grow}>
         <AppBar
@@ -207,6 +264,7 @@ export default function PersistentDrawerLeft() {
           })}
         >
           <Toolbar>
+>>>>>>> master
             <IconButton
               color="inherit"
               aria-label="open drawer"
@@ -296,9 +354,15 @@ export default function PersistentDrawerLeft() {
               <ListItemText primary={text} />
             </ListItem>
           ))}
+<<<<<<< HEAD
+          {["Quarter-back"].map((text, index) =>(
+            <ListItem button key = {text}>
+              <ListItemText primary={text}/>
+=======
           {["Quarterback"].map((text, index) => (
             <ListItem button key={text}>
               <ListItemText primary={text} />
+>>>>>>> master
             </ListItem>
           ))}
           <BenchQb />
@@ -307,10 +371,17 @@ export default function PersistentDrawerLeft() {
               <ListItemText primary={text} />
             </ListItem>
           ))}
+<<<<<<< HEAD
+          <Bench/>
+          {["Wide-receiver"].map((text, index) =>(
+            <ListItem button key = {text}>
+              <ListItemText primary={text}/>
+=======
           <BenchRb />
           {["Wide Reciever"].map((text, index) => (
             <ListItem button key={text}>
               <ListItemText primary={text} />
+>>>>>>> master
             </ListItem>
           ))}
           <BenchWr />
