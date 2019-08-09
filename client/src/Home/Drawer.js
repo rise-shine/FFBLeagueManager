@@ -217,7 +217,7 @@ export default function PersistentDrawerLeft() {
               <MenuIcon />
             </IconButton>
             <Typography variant="h6" noWrap>
-              Fantacy Football League
+              Fantasy Football League
             </Typography>
 
             <div className={classes.grow} />
@@ -282,8 +282,8 @@ export default function PersistentDrawerLeft() {
             {theme.direction === "ltr" ? (
               <ChevronLeftIcon />
             ) : (
-              <ChevronRightIcon />
-            )}
+                <ChevronRightIcon />
+              )}
           </IconButton>
         </div>
         <Divider />
@@ -296,24 +296,24 @@ export default function PersistentDrawerLeft() {
               <ListItemText primary={text} />
             </ListItem>
           ))}
-          {["Quater-back"].map((text, index) => (
+          {["Quarterback"].map((text, index) => (
             <ListItem button key={text}>
               <ListItemText primary={text} />
             </ListItem>
           ))}
           <BenchQb />
-          {["Running-back"].map((text, index) => (
+          {["Running Back"].map((text, index) => (
             <ListItem button key={text}>
               <ListItemText primary={text} />
             </ListItem>
           ))}
           <BenchRb />
-          {["Wide-reciever"].map((text, index) => (
+          {["Wide Reciever"].map((text, index) => (
             <ListItem button key={text}>
               <ListItemText primary={text} />
             </ListItem>
           ))}
-          <BenchWr/>
+          <BenchWr />
         </List>
 
         <Divider />
@@ -326,7 +326,7 @@ export default function PersistentDrawerLeft() {
               <ListItemText primary={text} />
             </ListItem>
           ))}
-          <BenchQb/>
+          <BenchQb />
         </List>
         <List>
           <Divider />
@@ -338,7 +338,7 @@ export default function PersistentDrawerLeft() {
               <ListItemText primary={text} />
             </ListItem>
           ))}
-          <BenchQb/>
+          <BenchQb />
         </List>
         <Divider />
       </Drawer>

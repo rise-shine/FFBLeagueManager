@@ -17,7 +17,7 @@ export default ({ players }) => (
               {squad}
             </Typography>
             <List component="ul">
-              {players.map(({title}) => (
+              {players.map(({ title }) => (
                 <ListItem button>
                   <ListItemText primary={title} />
                 </ListItem>
@@ -28,11 +28,7 @@ export default ({ players }) => (
       </Paper>
     </Grid>
     <Grid item sm>
-     
-        <News />
-  
-     
-     
+      <News />
     </Grid>
   </Grid>
 );

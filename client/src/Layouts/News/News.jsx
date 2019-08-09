@@ -1,7 +1,9 @@
+//Dependencies
 import React from 'react'
 import axios from 'axios';
 import { Paper } from "@material-ui/core";
 import '../News/News.css'
+//Style
 const style = {
     Paper: { padding: 20, margin: 10, maxHeight: 400, overflow: 'scroll'}
   };
@@ -14,6 +16,7 @@ const buf = Buffer.from(
 const key = buf.toString("base64");
 console.log("base64 encoding", key);
 
+//Component
 export default class News extends React.Component{
     
 state = {
@@ -51,11 +54,12 @@ render() {
     return(
         
         <Paper style={style.Paper}>
-        <p>
+            <h1>Current Injuries</h1>
+        <div>
             {/*WILL MAKE THIS INTO MORE OF CHART LATER JUST TESTING OUT THE WRITING TO THE DOM*/}
            { this.state.players.map(player => <div>
-        <h3>Player</h3>{player.player.FirstName} {player.player.LastName} <h3>Team</h3> {player.team.Name} <h3>Injury</h3> {player.injury}</div>)} 
-        </p>
+        <h3>Player</h3>{player.player.FirstName} {player.player.LastName} <h3>Position</h3> {player.player.Position} <h3>Team</h3> {player.team.City} {player.team.Name} <h3>Injury</h3> {player.injury}</div>)} 
+        </div>
    </Paper> )
 }
 }
