@@ -1,5 +1,3 @@
-
-
 import React from 'react'
 import axios from 'axios';
 import { Paper } from "@material-ui/core";
@@ -8,28 +6,56 @@ const style = {
     Paper: { padding: 20, margin: 10, maxHeight: 400, overflow: 'scroll'}
   };
 
+//Authentication for API 
+const buf = Buffer.from(
+    "d2a3f8bb-9b97-4e5a-97ef-5d2a60" + ":" + "Lokidog01",
+    "ascii"
+);
+const key = buf.toString("base64");
+console.log("base64 encoding", key);
+
 export default class News extends React.Component{
     
- 
 state = {
-    articles: []
+    players: []
 }
 componentDidMount(){
-    axios.get('https://jsonplaceholder.typicode.com/posts').then(res =>{
-        console.log(res);
-        this.setState({ articles: res.data })
-
-    })
+    
+    axios({
+        //this returns stats for all players for a specific date
+        method: "GET",
+        url: "/pull/nfl/2018-regular/player_injuries.json",
+        baseURL: "https://api.mysportsfeeds.com/v1.2",
+        headers: {
+          Authorization: "Basic " + key
+        }
+      })
+        .then( response => {
+            //Shorter version so I don't have to type it all out 
+            
+          console.log(
+            "Response:",
+            response.data.playerinjuries.playerentry
+          );
+        
+          
+          this.setState({ players: response.data.playerinjuries.playerentry })
+        })
+        .catch(function(error) {
+          console.log(error);
+          
+        });
+        
 }
 render() {
     return(
+        
         <Paper style={style.Paper}>
-      
-            <h1>Latest Updates</h1>
-        <ul>
-           { this.state.articles.map(article => <li>{article.title}</li>)} 
-        </ul>
-        </Paper>
-    )
+        <p>
+            {/*WILL MAKE THIS INTO MORE OF CHART LATER JUST TESTING OUT THE WRITING TO THE DOM*/}
+           { this.state.players.map(player => <div>
+        <h3>Player</h3>{player.player.FirstName} {player.player.LastName} <h3>Team</h3> {player.team.Name} <h3>Injury</h3> {player.injury}</div>)} 
+        </p>
+   </Paper> )
 }
 }
