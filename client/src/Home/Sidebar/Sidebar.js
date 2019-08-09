@@ -2,16 +2,14 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Drawer from '@material-ui/core/Drawer';
 import CssBaseline from '@material-ui/core/CssBaseline';
-
 import List from '@material-ui/core/List';
-
 import Divider from '@material-ui/core/Divider';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import InboxIcon from '@material-ui/icons/MoveToInbox';
 import MailIcon from '@material-ui/icons/Mail';
-import Bench from "./SidebarComponents/Bench";
+import Bench from "./SidebarComponents/BenchQb";
 import '../Sidebar/Sidebar.css'
 
 
@@ -53,7 +51,7 @@ export default function PermanentDrawerLeft() {
         }}
         anchor="left"
       >
-  
+
         <div className={classes.toolbar} />
         <Divider />
         <List>
@@ -63,26 +61,26 @@ export default function PermanentDrawerLeft() {
               <ListItemText primary={text} />
             </ListItem>
           ))}
-          {["Quater-back"].map((text, index) =>(
-            <ListItem button key = {text}>
-              <ListItemText primary={text}/>
+          {["Quaterback"].map((text, index) => (
+            <ListItem button key={text}>
+              <ListItemText primary={text} />
             </ListItem>
           ))}
-          <Bench/>
-          {["Running-back"].map((text, index) =>(
-            <ListItem button key = {text}>
-              <ListItemText primary={text}/>
+          <Bench />
+          {["Running Back"].map((text, index) => (
+            <ListItem button key={text}>
+              <ListItemText primary={text} />
             </ListItem>
           ))}
-          <Bench/>
-          {["Wide-reciever"].map((text, index) =>(
-            <ListItem button key = {text}>
-              <ListItemText primary={text}/>
+          <Bench />
+          {["Wide Reciever"].map((text, index) => (
+            <ListItem button key={text}>
+              <ListItemText primary={text} />
             </ListItem>
           ))}
-          <Bench/>
+          <Bench />
         </List>
-        
+
         <Divider />
         <List>
           {["Defense"].map((text, index) => (
@@ -91,19 +89,19 @@ export default function PermanentDrawerLeft() {
               <ListItemText primary={text} />
             </ListItem>
           ))}
-          <Bench/>
+          <Bench />
         </List>
         <List>
-            <Divider/>
+          <Divider />
           {["Kicker"].map((text, index) => (
             <ListItem button key={text}>
               <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
               <ListItemText primary={text} />
             </ListItem>
           ))}
-          <Bench/>
+          <Bench />
         </List>
-        <Divider/>
+        <Divider />
       </Drawer>
 
     </div>

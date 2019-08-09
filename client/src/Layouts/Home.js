@@ -2,7 +2,7 @@ import React, { Fragment } from "react";
 import { Grid, Paper, Typography, List } from "@material-ui/core";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemText from "@material-ui/core/ListItemText";
-
+import News from './News/News.jsx'
 const style = {
   Paper: { padding: 20, margin: 10 }
 };
@@ -17,7 +17,7 @@ export default ({ players }) => (
               {squad}
             </Typography>
             <List component="ul">
-              {players.map(({title}) => (
+              {players.map(({ title }) => (
                 <ListItem button>
                   <ListItemText primary={title} />
                 </ListItem>
@@ -28,7 +28,7 @@ export default ({ players }) => (
       </Paper>
     </Grid>
     <Grid item sm>
-      <Paper style={style.Paper}>News</Paper>
+      <News />
     </Grid>
   </Grid>
 );

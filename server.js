@@ -2,6 +2,10 @@ const express = require("express");
 const routes = require("./controllers");
 const app = express();
 const PORT = process.env.PORT || 3001;
+
+// var db = require("./models"); - not being used right now. need to comment this back in later.
+
+
 var db = require("./models");
 
 // Defining middleware
@@ -21,4 +25,10 @@ db.sequelize.sync().then(() => {
   app.listen(PORT, () => {
     console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`);
   });
+// }); - DB is not being used right now. need to comment this back in later.
+
+
 });
+
+
+
