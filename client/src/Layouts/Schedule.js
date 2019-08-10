@@ -17,7 +17,7 @@ export default class Schedule extends React.Component {
                 {this.state.schedule.map(game => {
 
                     return (
-                        <span>
+                        <div id="scheduleDiv">
                             <span class="scheduleTextBold">Week 1: </span>
                             <ul>
                                 <li><span class="scheduleText">{game.week1.game1[0]} vs. {game.week1.game1[1]}</span></li>
@@ -158,7 +158,7 @@ export default class Schedule extends React.Component {
                                 <li><span class="scheduleText">{game.week14.game6[0]} vs. {game.week14.game6[1]}</span></li>
                             </ul>
 
-                            </span>
+                        </div>
                     )
                     
                 })}
