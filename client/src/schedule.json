@@ -1,0 +1,16 @@
+[{
+    "week1": {"game1": ["Team #2", "Team #1"], "game2": ["Team #4", "Team #3"], "game3": ["Team #5", "Team #6"], "game4": ["Team #7", "Team #8"], "game5": ["Team #9", "Team #10"], "game6": ["Team #11", "Team #12"]},
+    "week2": {"game1": ["Team #3", "Team #1"], "game2": ["Team #4", "Team #2"], "game3": ["Team #7", "Team #5"], "game4": ["Team #8", "Team #6"], "game5": ["Team #11", "Team #9"], "game6": ["Team #12", "Team #10"]},
+    "week3": {"game1": ["Team #2", "Team #3"], "game2": ["Team #1", "Team #4"], "game3": ["Team #6", "Team #7"], "game4": ["Team #5", "Team #8"], "game5": ["Team #10", "Team #11"], "game6": ["Team #9", "Team #12"]},
+    "week4": {"game1": ["Team #6", "Team #2"], "game2": ["Team #12", "Team #4"], "game3": ["Team #1", "Team #5"], "game4": ["Team #9", "Team #7"], "game5": ["Team #8", "Team #10"], "game6": ["Team #3", "Team #11"]},
+    "week5": {"game1": ["Team #7", "Team #2"], "game2": ["Team #10", "Team #4"], "game3": ["Team #11", "Team #5"], "game4": ["Team #1", "Team #6"], "game5": ["Team #12", "Team #8"], "game6": ["Team #3", "Team #9"]},
+    "week6": {"game1": ["Team #12", "Team #1"], "game2": ["Team #8", "Team #3"], "game3": ["Team #4", "Team #6"], "game4": ["Team #10", "Team #7"], "game5": ["Team #5", "Team #9"], "game6": ["Team #2", "Team #11"]},
+    "week7": {"game1": ["Team #11", "Team #1"], "game2": ["Team #6", "Team #3"], "game3": ["Team #4", "Team #5"], "game4": ["Team #9", "Team #8"], "game5": ["Team #2", "Team #10"], "game6": ["Team #7", "Team #12"]},
+    "week8": {"game1": ["Team #8", "Team #2"], "game2": ["Team #9", "Team #4"], "game3": ["Team #1", "Team #7"], "game4": ["Team #5", "Team #10"], "game5": ["Team #6", "Team #11"], "game6": ["Team #3", "Team #12"]},
+    "week9": {"game1": ["Team #8", "Team #1"], "game2": ["Team #7", "Team #3"], "game3": ["Team #11", "Team #4"], "game4": ["Team #12", "Team #5"], "game5": ["Team #10", "Team #6"], "game6": ["Team #2", "Team #9"]},
+    "week10": {"game1": ["Team #10", "Team #1"], "game2": ["Team #5", "Team #3"], "game3": ["Team #9", "Team #6"], "game4": ["Team #4", "Team #7"], "game5": ["Team #11", "Team #8"], "game6": ["Team #2", "Team #12"]},
+    "week11": {"game1": ["Team #5", "Team #2"], "game2": ["Team #4", "Team #8"], "game3": ["Team #1", "Team #9"], "game4": ["Team #3", "Team #10"], "game5": ["Team #7", "Team #11"], "game6": ["Team #6", "Team #12"]},
+    "week12": {"game1": ["Team #1", "Team #2"], "game2": ["Team #3", "Team #4"], "game3": ["Team #6", "Team #5"], "game4": ["Team #8", "Team #7"], "game5": ["Team #10", "Team #9"], "game6": ["Team #12", "Team #11"]},
+    "week13": {"game1": ["Team #1", "Team #3"], "game2": ["Team #2", "Team #4"], "game3": ["Team #5", "Team #7"], "game4": ["Team #6", "Team #8"], "game5": ["Team #9", "Team #11"], "game6": ["Team #10", "Team #12"]},
+    "week14": {"game1": ["Team #4", "Team #1"], "game2": ["Team #3", "Team #2"], "game3": ["Team #8", "Team #5"], "game4": ["Team #7", "Team #6"], "game5": ["Team #12", "Team #9"], "game6": ["Team #11", "Team #10"]}
+}]
