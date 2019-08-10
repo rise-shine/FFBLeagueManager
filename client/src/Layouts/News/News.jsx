@@ -3,9 +3,16 @@ import React from 'react'
 import axios from 'axios';
 import { Paper } from "@material-ui/core";
 import '../News/News.css'
+
 //Style
 const style = {
-    Paper: { padding: 20, margin: 10, maxHeight: 400, overflow: 'scroll'}
+    Paper: { 
+    padding: 20,
+    margin: 10, 
+    maxHeight: 400,
+    maxWidth:750, 
+    overflow: 'scroll',
+    position: 'fixed'}
   };
 
 //Authentication for API 
@@ -34,14 +41,9 @@ componentDidMount(){
         }
       })
         .then( response => {
-            //Shorter version so I don't have to type it all out 
-            
-          console.log(
-            "Response:",
+          console.log("Response:",
             response.data.playerinjuries.playerentry
-          );
-        
-          
+          );      
           this.setState({ players: response.data.playerinjuries.playerentry })
         })
         .catch(function(error) {
@@ -54,12 +56,42 @@ render() {
     return(
         
         <Paper style={style.Paper}>
-            <h1>Current Injuries</h1>
-        <div>
-            {/*WILL MAKE THIS INTO MORE OF CHART LATER JUST TESTING OUT THE WRITING TO THE DOM*/}
-           { this.state.players.map(player => <div>
-        <h3>Player</h3>{player.player.FirstName} {player.player.LastName} <h3>Position</h3> {player.player.Position} <h3>Team</h3> {player.team.City} {player.team.Name} <h3>Injury</h3> {player.injury}</div>)} 
-        </div>
+          <h1>Latest Updates</h1>
+<ul class="nav nav-tabs">
+  <li class="active"><a data-toggle="tab" href="#home">News</a></li>
+  <li><a data-toggle="tab" href="#menu1">Injuries</a></li>
+</ul>
+
+<div class="tab-content">
+  <div id="home" class="tab-pane fade in active">
+    <h3>News</h3>
+  </div>
+  <div id="menu1" class="tab-pane fade">
+    <h3>Injuries</h3>
+    <div class="container">      
+<table className="table table-striped">
+  <thead>
+    <tr>
+      <th>Player</th>
+      <th>Position</th>
+      <th>Team</th>
+      <th>Injury Status</th>
+    </tr>
+  </thead>
+  <tbody>
+      { this.state.players.map(player =>
+      <tr>
+      <td>{player.player.FirstName} {player.player.LastName}</td>
+      <td>{player.player.Position}</td>
+      <td>{player.team.Name} </td>
+      <td>{player.injury}</td>
+      </tr>)}
+  </tbody>
+</table>
+</div>
+  </div>
+  
+</div>
    </Paper> )
 }
 }

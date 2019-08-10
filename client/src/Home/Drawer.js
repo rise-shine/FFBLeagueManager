@@ -26,6 +26,7 @@ import AccountCircle from "@material-ui/icons/AccountCircle";
 import MoreIcon from "@material-ui/icons/MoreVert";
 import TrendingIcon from "@material-ui/icons/TrendingUp";
 import FavoriteIcon from "@material-ui/icons/Portrait";
+import '../App.css'
 
 const drawerWidth = 240;
 
@@ -207,23 +208,28 @@ export default function PersistentDrawerLeft() {
           })}
         >
           <Toolbar>
+           
             <IconButton
               color="inherit"
               aria-label="open drawer"
               onClick={handleDrawerOpen}
               edge="start"
+             fontsize="large"
               className={clsx(classes.menuButton, open && classes.hide)}
-            >
-              <MenuIcon />
+            > 
+              <MenuIcon 
+              color="inherit"
+              fontSize="large"
+              />
+            
+
             </IconButton>
-            <Typography variant="h6" noWrap>
-              Fantasy Football League
-            </Typography>
+              <h2>Fantasy Football League Manager</h2>
 
             <div className={classes.grow} />
 
             <div className={classes.sectionDesktop}>
-              <p id="scheduleText">Schedule/Ranking</p>
+              <h4>Schedule/Ranking</h4>
               <IconButton
                 aria-label="show 4 new mails"
                 color="inherit"
@@ -231,7 +237,7 @@ export default function PersistentDrawerLeft() {
               >
                 <TrendingIcon />
               </IconButton>
-              <p id="rosterText">Roster</p>
+              <h4>Roster</h4>
               <IconButton
                 aria-label="show 17 new notifications"
                 color="inherit"
@@ -239,7 +245,7 @@ export default function PersistentDrawerLeft() {
               >
                 <FavoriteIcon />
               </IconButton>
-              <p id="idText">Profile</p>
+              <h4>Profile</h4>
               <IconButton
                 edge="end"
                 aria-label="account of current user"
@@ -282,8 +288,8 @@ export default function PersistentDrawerLeft() {
             {theme.direction === "ltr" ? (
               <ChevronLeftIcon />
             ) : (
-                <ChevronRightIcon />
-              )}
+              <ChevronRightIcon />
+            )}
           </IconButton>
         </div>
         <Divider />
@@ -313,7 +319,7 @@ export default function PersistentDrawerLeft() {
               <ListItemText primary={text} />
             </ListItem>
           ))}
-          <BenchWr />
+          <BenchWr/>
         </List>
 
         <Divider />
@@ -326,7 +332,7 @@ export default function PersistentDrawerLeft() {
               <ListItemText primary={text} />
             </ListItem>
           ))}
-          <BenchQb />
+          <BenchQb/>
         </List>
         <List>
           <Divider />
@@ -338,7 +344,7 @@ export default function PersistentDrawerLeft() {
               <ListItemText primary={text} />
             </ListItem>
           ))}
-          <BenchQb />
+          <BenchQb/>
         </List>
         <Divider />
       </Drawer>

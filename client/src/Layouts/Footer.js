@@ -11,7 +11,7 @@ export default ({team}) =>
         indicatorColor="primary"
         textColor="primary"
         centered
-      >
+     >
           <Tab label= "All" />
           {team.map(squad =>
             <Tab label= {squad} />

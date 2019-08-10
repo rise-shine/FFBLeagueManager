@@ -104,7 +104,7 @@ export default function PrimarySearchAppBar() {
         <IconButton aria-label="show 11 new notifications" color="inherit">
           <FavoriteIcon />
         </IconButton>
-        <p>Roster</p>
+        <h2>Roster</h2>
       </MenuItem>
       <MenuItem onClick={handleProfileMenuOpen}>
         <IconButton
@@ -128,13 +128,12 @@ export default function PrimarySearchAppBar() {
             edge="start"
             className={classes.menuButton}
             color="inherit"
+            fontSize="large"
             aria-label="open drawer"
           >
             <MenuIcon />
           </IconButton>
-          <Typography className={classes.title} variant="h6" noWrap>
-            Fantasy Football League
-          </Typography>
+         <h3>Fantasy Football</h3>
 
           <div className={classes.grow} />
 
