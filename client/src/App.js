@@ -5,16 +5,10 @@ import Footer from './Layouts/Footer';
 import Home from "./Layouts/Home";
 import Roster from "./Layouts/Roster";
 import {team , players } from "./team";
-<<<<<<< HEAD
 import Navbar from "./Home/Navbar/Navbar";
 // import Sidebar from "./Home/Sidebar/Sidebar"
 import Drawer from "./Home/Drawer";
 import Schedule from "./Layouts/Schedule";
-=======
-
-//import Sidebar from "./Home/Sidebar/Sidebar"
-import Drawer from "./Home/Drawer"
->>>>>>> master
 
 export default class App extends Component {
   state = {
@@ -44,7 +38,6 @@ export default class App extends Component {
     const players = this.getHomeByTeam()
     return (
 
-<<<<<<< HEAD
 
       <Router>
       <div>
@@ -66,48 +59,7 @@ export default class App extends Component {
       </div>
     </Router>
 
-      // <Fragment>
-      //   <Navbar/>
-        
-      //   <Home 
-      //   players = {players}/>
-      //   <Drawer/>
-      //   <Footer 
-      //     team={team}
-      //   />
-      // </Fragment>
-=======
-      <Fragment>
-       
-         <Drawer/>
-        <Home 
-        players = {players}/>
-       
-        <Footer 
-          team={team}
-        />
-      </Fragment>
->>>>>>> master
-      // <BrowserRouter>
-      //    <Fragment>
-      //   <ul>
-      //     <li>
-      //       <Link to="/"><Home/></Link>
-      //     </li>
-      //     <li>
-      //       <Link to="/roster">Roster</Link>
-      //     </li>
-      //     <li>
-      //       <Link to="/schedule">Schedule/ Rank</Link>
-      //     </li>
-      //   </ul>
-
-      //   <Route exact path="/" render={() => <div>Home</div>} />
-      //   <Route exact path="/" render={() => <div>Roster</div>} />
-      //   <Route exact path="/" render={() => <div>Schedule/ Roster</div>} />
-      // </Fragment>
-      // </BrowserRouter>
-   
+      
     )
   }
 }

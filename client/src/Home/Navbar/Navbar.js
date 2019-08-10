@@ -11,7 +11,9 @@ import AccountCircle from "@material-ui/icons/AccountCircle";
 import MoreIcon from "@material-ui/icons/MoreVert";
 import TrendingIcon from "@material-ui/icons/TrendingUp";
 import FavoriteIcon from "@material-ui/icons/Portrait";
-import '../Navbar/Navbar.css'
+import '../Navbar/Navbar.css';
+import { Link } from "react-router-dom";
+
 
 const useStyles = makeStyles(theme => ({
   grow: {
@@ -104,7 +106,9 @@ export default function PrimarySearchAppBar() {
         <IconButton aria-label="show 11 new notifications" color="inherit">
           <FavoriteIcon />
         </IconButton>
-        <p>Roster</p>
+        <Link to="/roster" className={window.location.pathname === "/roster" ? "nav-link active" : "nav-link"}>
+              <p id="rosterText">Roster</p>
+            </Link>
       </MenuItem>
       <MenuItem onClick={handleProfileMenuOpen}>
         <IconButton
@@ -143,7 +147,9 @@ export default function PrimarySearchAppBar() {
             <IconButton aria-label="show 4 new mails" color="inherit" id="trendingIcon">
               <TrendingIcon />
             </IconButton>
-            <p id="rosterText">Roster</p>
+            <Link to="/roster" className={window.location.pathname === "/roster" ? "nav-link active" : "nav-link"}>
+              <p id="rosterText">Roster</p>
+            </Link>
             <IconButton aria-label="show 17 new notifications" color="inherit" id="favoriteIcon">
               <FavoriteIcon />
             </IconButton>
