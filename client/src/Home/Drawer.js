@@ -25,6 +25,7 @@ import MoreIcon from "@material-ui/icons/MoreVert";
 import TrendingIcon from "@material-ui/icons/TrendingUp";
 import FavoriteIcon from "@material-ui/icons/Portrait";
 import { Link } from "react-router-dom";
+import '../Home/Drawer.css';
 
 
 const drawerWidth = 240;
@@ -223,7 +224,7 @@ export default function PersistentDrawerLeft() {
           >
             <MenuIcon />
           </IconButton>
-          <Typography variant="h6" noWrap>
+          <Typography variant="h6" noWrap id="titleText">
            Fantasy Football League
           </Typography>
         

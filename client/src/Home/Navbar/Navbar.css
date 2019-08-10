@@ -1,7 +1,7 @@
 #trendingIcon{
     margin-right: 20px;
     margin-left: 2px;
-    color: yellow;
+    color: rgb(200, 195, 226);
 }
 
 #trendingIcon:hover {
@@ -9,13 +9,13 @@
 }
 
 #scheduleText{
-    color: yellow;
+    color: rgb(200, 195, 226);
 }
 
 #favoriteIcon{
     margin-right: 20px;
     margin-left: 2px;
-    color: yellowgreen;
+    color: rgb(200, 195, 226);
 }
 
 #favoriteIcon:hover {
@@ -23,13 +23,13 @@
 }
 
 #rosterText{
-    color: yellowgreen;
+    color: rgb(200, 195, 226);
 }
 
 #profileIcon{
     margin-right: 10px;
     margin-left: 2px;
-    color: orange;
+    color: rgb(200, 195, 226);
 }
 
 #profileIcon:hover {
@@ -37,5 +37,5 @@
 }
 
 #idText{
-    color: orange;
+    color: rgb(200, 195, 226);
 }
