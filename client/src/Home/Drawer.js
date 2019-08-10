@@ -178,7 +178,9 @@ export default function PersistentDrawerLeft() {
         <IconButton aria-label="show 4 new mails" color="inherit">
           <TrendingIcon />
         </IconButton>
+        <Link to="/schedule" className={window.location.pathname === "/schedule" ? "nav-link active" : "nav-link"}>
         <p>Schedule/Ranking</p>
+        </Link>
       </MenuItem>  
       <MenuItem>
         <IconButton aria-label="show 11 new notifications" color="inherit">
@@ -232,7 +234,9 @@ export default function PersistentDrawerLeft() {
           <div className={classes.grow} />
 
           <div className={classes.sectionDesktop}>
+          <Link to="/schedule" className={window.location.pathname === "/schedule" ? "nav-link active" : "nav-link"}>
          <h4>Schedule/Ranking</h4>
+         </Link>
               <IconButton aria-label="show 4 new mails" color="inherit" id="trendingIcon">
                 <TrendingIcon />
               </IconButton>
