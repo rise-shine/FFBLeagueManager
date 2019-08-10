@@ -1,0 +1,41 @@
+#trendingIcon{
+    margin-right: 20px;
+    margin-left: 2px;
+    color: yellow;
+}
+
+#trendingIcon:hover {
+    transform: scale(1.2); 
+}
+
+#scheduleText{
+    color: yellow;
+}
+
+#favoriteIcon{
+    margin-right: 20px;
+    margin-left: 2px;
+    color: yellowgreen;
+}
+
+#favoriteIcon:hover {
+    transform: scale(1.2); 
+}
+
+#rosterText{
+    color: yellowgreen;
+}
+
+#profileIcon{
+    margin-right: 10px;
+    margin-left: 2px;
+    color: orange;
+}
+
+#profileIcon:hover {
+    transform: scale(1.2); 
+}
+
+#idText{
+    color: orange;
+}
