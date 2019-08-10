@@ -1,6 +1,5 @@
 import React, { Component, Fragment } from 'react';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Footer from './Layouts/Footer';
 // import News from './News/News';
 import Home from "./Layouts/Home";
 import Roster from "./Layouts/Roster";
@@ -55,7 +54,6 @@ export default class App extends Component {
           <Route exact path="/schedule" component={Schedule}/>
         </Switch>
         <Drawer/>
-        <Footer team={team}/>
       </div>
     </Router>
 

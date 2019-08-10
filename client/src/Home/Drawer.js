@@ -221,28 +221,28 @@ export default function PersistentDrawerLeft() {
             onClick={handleDrawerOpen}
             edge="start"
             className={clsx(classes.menuButton, open && classes.hide)}
+            fontSize="large"
           >
-            <MenuIcon />
+            <MenuIcon
+            fontSize="large" />
           </IconButton>
-          <Typography variant="h6" noWrap id="titleText">
-           Fantasy Football League
-          </Typography>
-        
-
+          <Link to="/" className={window.location.pathname === "/" ? "nav-link active" : "nav-link"}>
+             <h2>League Manager</h2>
+            </Link>
           <div className={classes.grow} />
 
           <div className={classes.sectionDesktop}>
-            <p id="scheduleText">Schedule/Ranking</p>
+         <h4>Schedule/Ranking</h4>
               <IconButton aria-label="show 4 new mails" color="inherit" id="trendingIcon">
                 <TrendingIcon />
               </IconButton>
             <Link to="/roster" className={window.location.pathname === "/roster" ? "nav-link active" : "nav-link"}>
-              <p id="rosterText">Roster</p>
+             <h4>Roster</h4>
             </Link>
             <IconButton aria-label="show 17 new notifications" color="inherit" id="favoriteIcon">
               <FavoriteIcon />
             </IconButton>
-            <p id="idText">Profile</p>
+           <h4>Profile</h4>
             <IconButton
               edge="end"
               aria-label="account of current user"

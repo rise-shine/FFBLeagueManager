@@ -11,7 +11,8 @@ const style = {
     margin: 10, 
     maxHeight: 400,
     maxWidth:750, 
-    overflow: 'scroll'}
+    overflow: 'scroll',
+    position: 'fixed'}
   };
 
 //Authentication for API 
