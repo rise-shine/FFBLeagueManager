@@ -13,7 +13,8 @@
         "WR5": {"first": "Jordy", "last": "Nelson", "ID": "6932"},
         "WR6": {"first": "Eric", "last": "Ebron", "ID": "6845"},
         "KIC": {"first": "Kaimi", "last": "Fairbairn", "ID": "9686"},
-        "DEF": {"city": "Baltimore", "team": "Ravens", "ID": "56"}
+        "DEF": {"city": "Baltimore", "team": "Ravens", "ID": "56"},
+        "Team": {"name": "Team #1"}
     },
     {
         "QB1": {"first": "Matt", "last": "Ryan", "ID": "6025"},
@@ -29,7 +30,8 @@
         "WR5": {"first": "Doug", "last": "Baldwin", "ID": "8292"},
         "WR6": {"first": "Jared", "last": "Cook", "ID": "8487"},
         "KIC": {"first": "Justin", "last": "Tucker", "ID": "6198"},
-        "DEF": {"city": "Minnesota", "team": "Vikings", "ID": "63"}
+        "DEF": {"city": "Minnesota", "team": "Vikings", "ID": "63"},
+        "Team": {"name": "Team #2"}
     },
     {
         "QB1": {"first": "Ben", "last": "Roethlisberger", "ID": "8100"},
@@ -45,7 +47,8 @@
         "WR5": {"first": "Antonio", "last": "Callaway", "ID": "14673"},
         "WR6": {"first": "Trey", "last": "Burton", "ID": "8030"},
         "KIC": {"first": "Jason", "last": "Myers", "ID": "7266"},
-        "DEF": {"city": "Kansas city", "team": "Chiefs", "ID": "73"}
+        "DEF": {"city": "Kansas city", "team": "Chiefs", "ID": "73"},
+        "Team": {"name": "Team #3"}
     },
     {
         "QB1": {"first": "Deshaun", "last": "Watson", "ID": "13027"},
@@ -61,7 +64,8 @@
         "WR5": {"first": "Anthony", "last": "Miller", "ID": "14665"},
         "WR6": {"first": "Austin", "last": "Hooper", "ID": "9741"},
         "KIC": {"first": "Wil", "last": "Lutz", "ID": "10054"},
-        "DEF": {"city": "Denver", "team": "Broncos", "ID": "72"}
+        "DEF": {"city": "Denver", "team": "Broncos", "ID": "72"},
+        "Team": {"name": "Team #4"}
     },
     {
         "QB1": {"first": "Andrew", "last": "Luck", "ID": "7093"},
@@ -77,7 +81,8 @@
         "WR5": {"first": "Cole", "last": "Beasley", "ID": "6657"},
         "WR6": {"first": "David", "last": "Njoku", "ID": "12875"},
         "KIC": {"first": "Harrison", "last": "Butker", "ID": "12796"},
-        "DEF": {"city": "Seattle", "team": "Seahawks", "ID": "79"}
+        "DEF": {"city": "Seattle", "team": "Seahawks", "ID": "79"},
+        "Team": {"name": "Team #5"}
     },
     {
         "QB1": {"first": "Aaron", "last": "Rodgers", "ID": "6914"},
@@ -93,7 +98,8 @@
         "WR5": {"first": "Taylor", "last": "Gabriel", "ID": "6567"},
         "WR6": {"first": "Travis", "last": "Kelce", "ID": "7299"},
         "KIC": {"first": "Mason", "last": "Crosby", "ID": "6997"},
-        "DEF": {"city": "Washington", "team": "Redskins", "ID": "55"}
+        "DEF": {"city": "Washington", "team": "Redskins", "ID": "55"},
+        "Team": {"name": "Team #6"}
     },
     {
         "QB1": {"first": "Jared", "last": "Goff", "ID": "9919"},
@@ -109,7 +115,8 @@
         "WR5": {"first": "Donte", "last": "Moncrief", "ID": "7108"},
         "WR6": {"first": "George", "last": "Kittle", "ID": "13457"},
         "KIC": {"first": "Aldrick", "last": "Rosas", "ID": "13101"},
-        "DEF": {"city": "Indianapolis", "team": "Colts", "ID": "65"}
+        "DEF": {"city": "Indianapolis", "team": "Colts", "ID": "65"},
+        "Team": {"name": "Team #7"}
     },
     {
         "QB1": {"first": "Drew", "last": "Brees", "ID": "7641"},
@@ -125,7 +132,8 @@
         "WR5": {"first": "Marvin", "last": "Jones Jr.", "ID": "6479"},
         "WR6": {"first": "Zach", "last": "Ertz", "ID": "8032"},
         "KIC": {"first": "Robbie", "last": "Gould", "ID": "6460"},
-        "DEF": {"city": "Tennessee", "team": "Titans", "ID": "67"}
+        "DEF": {"city": "Tennessee", "team": "Titans", "ID": "67"},
+        "Team": {"name": "Team #8"}
     },
     {
         "QB1": {"first": "Russell", "last": "Wilson", "ID": "8283"},
@@ -141,7 +149,8 @@
         "WR5": {"first": "Christian", "last": "Kirk", "ID": "14654"},
         "WR6": {"first": "Kyle", "last": "Rudolph", "ID": "7485"},
         "KIC": {"first": "Stephen", "last": "Gostkowski", "ID": "7638"},
-        "DEF": {"city": "Pittsburgh", "team": "Steelers", "ID": "59"}
+        "DEF": {"city": "Pittsburgh", "team": "Steelers", "ID": "59"},
+        "Team": {"name": "Team #9"}
     },
     {
         "QB1": {"first": "Dak", "last": "Prescott", "ID": "9845"},
@@ -157,7 +166,8 @@
         "WR5": {"first": "Rashard", "last": "Higgins", "ID": "9823"},
         "WR6": {"first": "O.J.", "last": "Howard", "ID": "13491"},
         "KIC": {"first": "Brett", "last": "Maher", "ID": "14978"},
-        "DEF": {"city": "Houston", "team": "Texans", "ID": "64"}
+        "DEF": {"city": "Houston", "team": "Texans", "ID": "64"},
+        "Team": {"name": "Team #10"}
     },
     {
         "QB1": {"first": "Philip", "last": "Rivers", "ID": "8190"},
@@ -173,7 +183,8 @@
         "WR5": {"first": "Devin", "last": "Funchess", "ID": "6309"},
         "WR6": {"first": "Rob", "last": "Gronkowski", "ID": "7575"},
         "KIC": {"first": "Matt", "last": "Prater", "ID": "6908"},
-        "DEF": {"city": "Los Angeles", "team": "Rams", "ID": "77"}
+        "DEF": {"city": "Los Angeles", "team": "Rams", "ID": "77"},
+        "Team": {"name": "Team #11"}
     },
     {
             "QB1": {"first": "Kirk", "last": "Cousins", "ID": "8731"},
@@ -189,6 +200,7 @@
             "WR5": {"first": "Michael", "last": "Crabtree", "ID": "7930"},
             "WR6": {"first": "Vance", "last": "McDonald", "ID": "8403"},
             "KIC": {"first": "Sebastian", "last": "Janikowski", "ID": "8003"},
-            "DEF": {"city": "Chicago", "team": "Bears", "ID": "60"}
+            "DEF": {"city": "Chicago", "team": "Bears", "ID": "60"},
+            "Team": {"name": "Team #12"}
     }
 ]
