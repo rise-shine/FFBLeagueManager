@@ -30,7 +30,7 @@ export default class Rosters extends React.Component {
       //this returns stats for all players for a specific date
       method: "GET",
       url:
-        "/pull/nfl/2018-regular/roster_players.json?fordate=20180923&sort=player.team",
+        "/pull/nfl/2018-regular/roster_players.json?fordate=20180923&sort=player.team&rosterstatus=assigned-to-roster",
       baseURL: "https://api.mysportsfeeds.com/v1.2",
       headers: {
         Authorization: "Basic " + key
