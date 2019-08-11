@@ -106,9 +106,9 @@ export default function PrimarySearchAppBar() {
         <IconButton aria-label="show 11 new notifications" color="inherit">
           <FavoriteIcon />
         </IconButton>
-        <Link to="/roster" className={window.location.pathname === "/roster" ? "nav-link active" : "nav-link"}>
-              <p id="rosterText">Roster</p>
-            </Link>
+        <Link to="/roster" className={window.location.pathname === "/roster" ? "nav-link active"  : "nav-link"}>
+            <p id="rosterText">Roster</p>
+        </Link>
       </MenuItem>
       <MenuItem onClick={handleProfileMenuOpen}>
         <IconButton
