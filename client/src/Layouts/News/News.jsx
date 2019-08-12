@@ -7,11 +7,13 @@ import '../News/News.css'
 //Style
 const style = {
     Paper: { 
-    padding: 20,
+   
     margin: 10, 
     maxHeight: 400,
-    maxWidth:750, 
-    overflow: 'scroll'}
+    maxWidth:900, 
+    overflow: 'scroll',
+    position: 'sticky'
+  }
   };
 
 //Authentication for API 
@@ -82,7 +84,7 @@ render() {
       <tr>
       <td>{player.player.FirstName} {player.player.LastName}</td>
       <td>{player.player.Position}</td>
-      <td>{player.team.Name} </td>
+      <td>{player.team.City} {player.team.Name} </td>
       <td>{player.injury}</td>
       </tr>)}
   </tbody>

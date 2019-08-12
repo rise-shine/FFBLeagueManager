@@ -2,3 +2,13 @@
 h1{
     text-align:center;
 }
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; /* make scrollbar transparent */
+}
+td{
+    font-size:medium;
+}
+th{
+    font-size:medium
+}

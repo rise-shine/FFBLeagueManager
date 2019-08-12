@@ -8,6 +8,7 @@ import Navbar from "./Home/Navbar/Navbar";
 // import Sidebar from "./Home/Sidebar/Sidebar"
 import Drawer from "./Home/Drawer";
 import Schedule from "./Layouts/Schedule";
+import NotLoggedIn from "../src/Home/NotLoggedIn"
 
 export default class App extends Component {
   state = {
@@ -42,7 +43,8 @@ export default class App extends Component {
       <div>
         <Navbar />
         <Switch>
-          <Route exact path="/"
+          <Route exact path ="/" component={NotLoggedIn}/>
+          <Route exact path="/xx"
           render={props => (
               <Home
                 {...props}
