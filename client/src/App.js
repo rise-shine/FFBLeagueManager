@@ -2,7 +2,7 @@ import React, { Component, Fragment } from 'react';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 // import News from './News/News';
 import Home from "./Layouts/Home";
-import Roster from "./Layouts/Roster";
+import Rosters from "./Layouts/Rosters/Rosters";
 import {team , players } from "./team";
 import Navbar from "./Home/Navbar/Navbar";
 // import Sidebar from "./Home/Sidebar/Sidebar"
@@ -52,7 +52,7 @@ export default class App extends Component {
               />
           )}
           />
-          <Route exact path="/roster" component={Roster}/>
+          <Route exact path="/roster" component={Rosters}/>
           <Route exact path="/schedule" component={Schedule}/>
         </Switch>
         <Drawer/>
