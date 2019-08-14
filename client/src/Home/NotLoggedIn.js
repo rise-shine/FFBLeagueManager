@@ -1,9 +1,6 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import Paper from '@material-ui/core/Paper';
-import Grid from '@material-ui/core/Grid';
 import './NotLoggedIn.css'
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 
 class NotLoggedIn extends React.Component {
@@ -11,6 +8,7 @@ class NotLoggedIn extends React.Component {
     super(props);
 
     this.state = {
+      authenticated: false
      
     };
     console.log(this.state)
@@ -22,7 +20,8 @@ validateForm() {
 
 handleChange = event => {
     this.setState({
-        [event.target.name]: event.target.value
+        [event.target.name]: event.target.value,
+        authenticated:true
     });
 }
 
@@ -71,10 +70,39 @@ render(){
                         Create new account?
                      </p>
 
-                    <button  
-                    type="submit">
-                        Login
-                        </button>
+                     {this.state.authenticated === false &&
+                <>
+             <button
+             type="submit"
+             className="btn btn-primary"
+             data-toggle="modal"
+             data-target="#didntWorkModal">
+               Login
+             </button>
+             <div id="didntWorkModal" class="modal fade" role="dialog">
+             <div className="modal-dialog">
+                        <div className="modal-content">
+                            <div className="modal-header">
+                                <h4 className="modal-title">Login Failed</h4>
+                                <button type="button" className="close" data-dismiss="modal">&times;</button>
+                            </div>
+                            <div className="modal-body"> 
+                              <button type="submit" class="btn btn-secondary">Email/Password incorrect please try again</button>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+                </>
+                
+            }
+            {this.state.authenticated === true &&
+                <>
+              <Link to="/home" className={window.location.pathname === "/home" ? "nav-link active" : "nav-link"}>
+            <button type="button" class="btn btn-primary">Login</button> 
+            </Link>
+                </>
+            }
+            
                 </form>
 
                 <div id="loginModal" class="modal fade" role="dialog">
@@ -107,13 +135,7 @@ render(){
                                         value={this.state.password}
                                         onChange={this.handleChange} />
                                 </div>
-                                <button
-                                    type="submit">
-                                    Create Account
-                    </button>
-                            </div>
-                            <div className="modal-footer">
-                                <button type="button" className="btn btn-default" data-dismiss="modal">Close</button>
+                              <button type="submit" class="btn btn-secondary">Create Account</button>
                             </div>
                         </div>
                     </div>

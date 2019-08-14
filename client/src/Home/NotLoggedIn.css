@@ -5,7 +5,7 @@
     height: 100%;
     width: 100%;
   }
-  h2, h3, p{
+  h2, h3, p, input{
       text-align:center;
   }
   .form-group{
@@ -14,11 +14,21 @@
       text-align:center;
   }
  .Login{
-     background-color:green;
+    border: 1px solid black;
+    border-radius:5px;
+     background-color:azure;
      margin-left:33%;
      margin-right:33%;
+     box-shadow: 5px 5px 1px grey;
  }
 
- #loginModal{
+ #loginModal, #didntWorkModal{
      padding:100px;
  }
+ 
+ .btn{display:block;
+     margin:auto;
+     margin-bottom:5%;
+    max-width:300px;}
+
+ 
