@@ -212,7 +212,9 @@ export default function PersistentDrawerLeft() {
         >
           <AccountCircle />
         </IconButton>
-        <p>Profile</p>
+        <Link to="/teams" className={window.location.pathname === "/teams" ? "nav-link active" : "nav-link"}>
+        <p>Teams</p>
+        </Link>
       </MenuItem>
     </Menu>
   );
@@ -256,8 +258,10 @@ export default function PersistentDrawerLeft() {
             <IconButton aria-label="show 17 new notifications" color="inherit" id="favoriteIcon">
               <FavoriteIcon />
             </IconButton>
-           <h4>Profile</h4>
-           
+            <Link to="/teams" className={window.location.pathname === "/teams" ? "nav-link active" : "nav-link"}>
+           <h4>Teams</h4>
+           </Link>
+
             <IconButton
               edge="end"
               aria-label="account of current user"
