@@ -125,20 +125,36 @@ return (
     <Paper className={classes.root}>
         <Table className={classes.root}>
           <TableHead>
-            <TableRow>
-              <TableCell className={classes.header} align="center">Team</TableCell>
-              <TableCell className={classes.header} align="center">Player</TableCell>
-              <TableCell className={classes.header} align="center">Position</TableCell>
+          { window.location.pathname === "/schedule" ? (
+
+<TableRow>
+<TableCell className={classes.header} align="center">Week</TableCell>
+<TableCell className={classes.header} align="center">Date</TableCell>
+<TableCell className={classes.header} align="center">Location</TableCell>
+<TableCell className={classes.header} align="center">Home T.</TableCell>
+<TableCell className={classes.header} align="center">Away T.</TableCell>
+</TableRow>
+
+
+            
+              ) :(
+                <TableRow>
+                <TableCell className={classes.header} align="center">Team</TableCell>
+                <TableCell className={classes.header} align="center">Player</TableCell>
+                <TableCell className={classes.header} align="center">Position</TableCell>
             </TableRow>
-          </TableHead>
+              )}
+            </TableHead>
           <TableBody>
             {props.rows.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage).map(row => (
               <TableRow key={row.team}>
                 <TableCell className={classes.cells} component="th" scope="row" align="center">
-                  {row.team}
+                  {row.team || row.week}
                 </TableCell>
-                <TableCell className={classes.cells} align="center">{row.player}</TableCell>
-                <TableCell className={classes.cells} align="center">{row.position}</TableCell>
+                <TableCell className={classes.cells} align="center">{row.player || row.date}</TableCell>
+                <TableCell className={classes.cells} align="center">{row.position ||row.location}</TableCell>
+                {row.homeTeam && ( <TableCell className={classes.cells} align="center">{row.homeTeam}</TableCell> )}
+                {row.awayTeam && ( <TableCell className={classes.cells} align="center">{row.awayTeam}</TableCell> )}
               </TableRow>
             ))}
 
