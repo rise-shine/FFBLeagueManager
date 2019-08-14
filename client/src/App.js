@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 // import News from './News/News';
 import Home from "./Layouts/Home";
@@ -44,7 +44,7 @@ export default class App extends Component {
         <Navbar />
         <Switch>
           <Route exact path ="/" component={NotLoggedIn}/>
-          <Route exact path="/xx"
+          <Route exact path="/home"
           render={props => (
               <Home
                 {...props}

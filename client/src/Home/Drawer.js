@@ -157,9 +157,21 @@ export default function PersistentDrawerLeft() {
       open={isMenuOpen}
       onClose={handleMenuClose}
     >
+        <MenuItem 
+      onClick={handleMenuClose}>
+       <Link to="/home" classname={window.location.pathname === "/home" ? "nav-link active" : "nav-link"}>
+     Home
+        </Link> 
+        </MenuItem>
       <MenuItem onClick={handleMenuClose}>Profile</MenuItem>
       <MenuItem onClick={handleMenuClose}>My account</MenuItem>
-      <MenuItem onClick={handleMenuClose}>Log Out</MenuItem>
+      <MenuItem 
+      onClick={handleMenuClose}>
+        <Link to="/" className={window.location.pathname === "/" ? "nav-link active" : "nav-link"}>
+           Log Out
+            </Link>
+        </MenuItem>
+      
     </Menu>
   );
 
@@ -228,9 +240,7 @@ export default function PersistentDrawerLeft() {
             <MenuIcon
             fontSize="large" />
           </IconButton>
-          <Link to="/" className={window.location.pathname === "/" ? "nav-link active" : "nav-link"}>
-             <h2>League Manager</h2>
-            </Link>
+          
           <div className={classes.grow} />
 
           <div className={classes.sectionDesktop}>
@@ -247,6 +257,7 @@ export default function PersistentDrawerLeft() {
               <FavoriteIcon />
             </IconButton>
            <h4>Profile</h4>
+           
             <IconButton
               edge="end"
               aria-label="account of current user"
@@ -297,19 +308,19 @@ export default function PersistentDrawerLeft() {
               <ListItemText primary={text} />
             </ListItem>
           ))}
-          {["Quarter-back"].map((text, index) =>(
+          {["Quarterback"].map((text, index) =>(
             <ListItem button key = {text}>
               <ListItemText primary={text}/>
             </ListItem>
           ))}
           <Bench/>
-          {["Running-back"].map((text, index) =>(
+          {["Runningback"].map((text, index) =>(
             <ListItem button key = {text}>
               <ListItemText primary={text}/>
             </ListItem>
           ))}
           <Bench/>
-          {["Wide-receiver"].map((text, index) =>(
+          {["Wide Receiver"].map((text, index) =>(
             <ListItem button key = {text}>
               <ListItemText primary={text}/>
             </ListItem>

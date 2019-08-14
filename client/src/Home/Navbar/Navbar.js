@@ -15,6 +15,7 @@ import '../Navbar/Navbar.css';
 import { Link } from "react-router-dom";
 
 
+
 const useStyles = makeStyles(theme => ({
   grow: {
     flexGrow: 1
@@ -79,9 +80,21 @@ export default function PrimarySearchAppBar() {
       open={isMenuOpen}
       onClose={handleMenuClose}
     >
+      <MenuItem 
+      onClick={handleMenuClose}>
+       <Link to="/home" classname={window.location.pathname === "/home" ? "nav-link active" : "nav-link"}>
+        Home
+        </Link> 
+        </MenuItem>
       <MenuItem onClick={handleMenuClose}>Profile</MenuItem>
-      <MenuItem onClick={handleMenuClose}>My account</MenuItem>
-      <MenuItem onClick={handleMenuClose}>Log Out</MenuItem>
+ 
+      <MenuItem 
+      onClick={handleMenuClose}>
+        <Link to="/" className={window.location.pathname === "/" ? "nav-link active" : "nav-link"}>
+           Log Out
+            </Link>
+        
+        </MenuItem>
     </Menu>
   );
 
@@ -106,8 +119,8 @@ export default function PrimarySearchAppBar() {
         <IconButton aria-label="show 11 new notifications" color="inherit">
           <FavoriteIcon />
         </IconButton>
-        <Link to="/roster" className={window.location.pathname === "/roster" ? "nav-link active"  : "nav-link"}>
-            <p id="rosterText">Roster</p>
+        <Link to="/roster" className={window.location.pathname === "/roster" ? "nav-link active" : "nav-link"}>
+          <p id="rosterText">Roster</p>
         </Link>
       </MenuItem>
       <MenuItem onClick={handleProfileMenuOpen}>
@@ -153,7 +166,7 @@ export default function PrimarySearchAppBar() {
             <IconButton aria-label="show 17 new notifications" color="inherit" id="favoriteIcon">
               <FavoriteIcon />
             </IconButton>
-            <p id="idText">Profile</p>
+            <p id="idText">Prile</p>
             <IconButton
               edge="end"
               aria-label="account of current user"
@@ -176,6 +189,8 @@ export default function PrimarySearchAppBar() {
             >
               <MoreIcon />
             </IconButton>
+
+
           </div>
         </Toolbar>
       </AppBar>

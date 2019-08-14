@@ -2,14 +2,17 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
+import { Link } from "react-router-dom";
+
 const useStyles = makeStyles(theme => ({
   root: {
     flexGrow: 1,
   },
   paper: {
+    marginTop: 100,
     padding: theme.spacing(2),
     textAlign: 'center',
-    color: theme.palette.text.secondary,
+    color: theme.palette.text.primary,
   },
 }));
 
@@ -20,13 +23,13 @@ export default function NotLoggedIn() {
 return (
 
   <div className={classes.root}>
-
+<h1>League Manager</h1>
     <Grid container spacing={3}>
       <Grid item xs>
       </Grid>
       <Grid item xs={6}>
         <Paper className={classes.paper}>
-          <h1>Please Log In</h1>
+          <h2>Please Log In</h2>
           <h3>Logging in allows you to access more features</h3>
           <form>
             <div class="form-group">
@@ -37,8 +40,10 @@ return (
               <label for="exampleInputPassword1">Password</label>
               <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" required />
             </div>
-           <a href="/xx"> <button type="button" class="btn btn-primary">Login</button> </a>
-
+            <Link to="/home" className={window.location.pathname === "/home" ? "nav-link active" : "nav-link"}>
+            <button type="button" class="btn btn-primary">Login</button> 
+            </Link>
+           
           </form>
 
         </Paper>
