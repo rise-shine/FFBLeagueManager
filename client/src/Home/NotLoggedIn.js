@@ -1,9 +1,11 @@
 import React from 'react';
 import './NotLoggedIn.css'
 import { Link } from "react-router-dom";
-
+import axios from 'axios'
 
 class NotLoggedIn extends React.Component {
+  
+
   constructor(props) {
     super(props);
 
@@ -22,21 +24,38 @@ validateForm() {
 
 handleChange = event => {
     this.setState({
-        [event.target.name]: event.target.value,   
+        [event.target.name]: event.target.value, 
+         authenticated:true  
     });
 }
-
 handleSubmit = event => {
     event.preventDefault();
-
-    
+    this.setState({
+     
+    })
     
 }
+handleSignUp = event => {
+
+    const { username, email, password } = this.state;
+
+    axios.post("/api/user/create", { username, email, password }).then(response => {
+      this.setState({
+        userName: response.data.name,
+        email: response.data.email,
+        userID: response.data.userID,
+        authenticated: true
+      });
+
+      localStorage.clear();
+      localStorage.setItem("id", this.state.userID);
+    });
+  };
 
 render(){
 
   return ( 
-  <container>
+  <>
     <h1>League Manager</h1>
     <div id="entireLogin">
  
@@ -47,22 +66,21 @@ render(){
             <div className="Login">
                 <form onSubmit={this.handleSubmit}>
                 <div className="form-group">
-                        <label htmlFor="Password"><h3>Username</h3></label>
+                        <label htmlFor="username"><h3>Username</h3></label>
                         <input
                             type="username"
                             className="form-control"
-                            name="usernameInput"
+                            name="username"
                             placeholder="Username"
                             onChange={this.handleChange} />
                     </div>
                     <div className="form-group">
-                        <label htmlFor="Email"><h3>Email</h3></label>
+                        <label htmlFor="email"><h3>Email</h3></label>
                         <input
                             type="email"
                             className="form-control"
-                            name="emailInput"
+                            name="email"
                             placeholder="Email"
-                        
                             onChange={this.handleChange} />
                     </div>
                     <div className="form-group">
@@ -70,7 +88,7 @@ render(){
                         <input
                             type="password"
                             className="form-control"
-                            name="passwordInput"
+                            name="password"
                             placeholder="Password"
                             onChange={this.handleChange} />
                     </div>
@@ -90,7 +108,7 @@ render(){
              data-target="#didntWorkModal">
                Login
              </button>
-             <div id="didntWorkModal" class="modal fade" role="dialog">
+             <div id="didntWorkModal" className="modal fade" role="dialog">
              <div className="modal-dialog">
                         <div className="modal-content">
                             <div className="modal-header">
@@ -109,14 +127,14 @@ render(){
             {this.state.authenticated === true &&
                 <>
               <Link to="/home" className={window.location.pathname === "/home" ? "nav-link active" : "nav-link"}>
-            <button type="button" class="btn btn-primary">Login</button> 
+            <button type="button" className="btn btn-primary">Login</button> 
             </Link>
                 </>
             }
             
                 </form>
 
-                <div id="loginModal" class="modal fade" role="dialog">
+                <div id="loginModal" className="modal fade" role="dialog">
 
                     <div className="modal-dialog">
                         <div className="modal-content">
@@ -127,22 +145,22 @@ render(){
                             </div>
                             <div className="modal-body">
                             <div className="form-group">
-                                    <label htmlFor="createUsername">Email address</label>
+                                    <label htmlFor="createUsername">Username</label>
                                     <input
-                                        type="email"
+                                        type="username"
                                         className="form-control"
-                                        id="username"
-                                        placeholder="Enter valid email address"
-                                        value={this.state.username}
-                                        onChange={this.handleChange} />
+                                        name="username"
+                                        placeholder="Choose a username..."
+                                        onChange={this.handleChange}  />
                                 </div>
                                 <div className="form-group">
                                     <label htmlFor="createEmail">Email address</label>
                                     <input
                                         type="email"
                                         className="form-control"
+                                        name="email"
                                         id="createEmail"
-                                        placeholder="Enter valid email address"
+                                        placeholder="Enter valid email address..."
                                         value={this.state.email}
                                         onChange={this.handleChange} />
                                 </div>
@@ -151,12 +169,15 @@ render(){
                                     <input
                                         type="password"
                                         className="form-control"
+                                        name="password"
                                         id="createPassword"
-                                        placeholder="Insert a password"
+                                        placeholder="Insert a password..."
                                         value={this.state.password}
                                         onChange={this.handleChange} />
                                 </div>
-                              <button type="submit" class="btn btn-secondary">Create Account</button>
+                              <button
+                              onClick={this.handleSignUp}
+                              type="submit" className="btn btn-secondary">Create Account</button>
                             </div>
                         </div>
                     </div>
@@ -165,7 +186,7 @@ render(){
              
   
   </div>
-   </container>    
+   </>    
   
       )
 }

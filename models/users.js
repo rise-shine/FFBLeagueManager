@@ -18,14 +18,6 @@ module.exports = function(sequelize, DataTypes) {
           allowNull: true
       }
     });
-    
-    User.associate = function(models) {
-      models.User.hasMany(models.Friend, {
-        onDelete: "cascade"
-      });
-  
-    };
-  
   
     return User;
   };

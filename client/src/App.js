@@ -16,7 +16,7 @@ export default class App extends Component {
     players,
     username:"",
     password:"",
-    
+    authenticated:false,
     
   }
 
@@ -56,6 +56,8 @@ export default class App extends Component {
               <Home
                 {...props}
                 players = {players}
+                history={this.props.history}
+
               />
           )}
           />
