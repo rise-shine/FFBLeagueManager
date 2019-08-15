@@ -83,11 +83,11 @@ render(){
              <div className="modal-dialog">
                         <div className="modal-content">
                             <div className="modal-header">
-                                <h4 className="modal-title">Login Failed</h4>
                                 <button type="button" className="close" data-dismiss="modal">&times;</button>
                             </div>
                             <div className="modal-body"> 
-                              <button type="submit" class="btn btn-secondary">Email/Password incorrect please try again</button>
+                              <h3>Email/Password Incorrect</h3>
+                              <p>Please try again</p>
                             </div>
                         </div>
                     </div>
