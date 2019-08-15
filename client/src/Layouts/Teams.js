@@ -19,9 +19,9 @@ export default class Roster extends React.Component {
                 {this.state.rosters.map(player => {
 
                     return (
-                        <div id="teamsDiv">
+                        <div class="teamsDiv">
                             <ul>
-                                <span class="rosterText">{player.Team.name} </span>
+                                <span class="teamNameText">{player.Team.name} </span>
                                 <li><span class="rosterText">QB: </span>{player.QB1.first} {player.QB1.last}</li>
                                 <li><span class="rosterText">QB: </span>{player.QB2.first} {player.QB2.last}</li>
                                 <li><span class="rosterText">RB: </span>{player.RB1.first} {player.RB1.last}</li>

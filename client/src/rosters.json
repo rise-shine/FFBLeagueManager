@@ -47,7 +47,7 @@
         "WR5": {"first": "Antonio", "last": "Callaway", "ID": "14673"},
         "WR6": {"first": "Trey", "last": "Burton", "ID": "8030"},
         "KIC": {"first": "Jason", "last": "Myers", "ID": "7266"},
-        "DEF": {"city": "Kansas city", "team": "Chiefs", "ID": "73"},
+        "DEF": {"city": "Kansas City", "team": "Chiefs", "ID": "73"},
         "Team": {"name": "Team #3"}
     },
     {
@@ -187,20 +187,20 @@
         "Team": {"name": "Team #11"}
     },
     {
-            "QB1": {"first": "Kirk", "last": "Cousins", "ID": "8731"},
-            "QB2": {"first": "Cam", "last": "Newton", "ID": "6294"},
-            "RB1": {"first": "Todd", "last": "Gurley II", "ID": "8469"},
-            "RB2": {"first": "Matt", "last": "Breida", "ID": "13466"},
-            "RB3": {"first": "Dion", "last": "Lewis", "ID": "7557"},
-            "RB4": {"first": "Duke", "last": "Johnson Jr.", "ID": "6560"},
-            "WR1": {"first": "Stefon", "last": "Diggs", "ID": "7471"},
-            "WR2": {"first": "Emmanuel", "last": "Sanders", "ID": "6756"},
-            "WR3": {"first": "Robby", "last": "Anderson", "ID": "9961"},
-            "WR4": {"first": "Courtland", "last": "Sutton", "ID": "14682"},
-            "WR5": {"first": "Michael", "last": "Crabtree", "ID": "7930"},
-            "WR6": {"first": "Vance", "last": "McDonald", "ID": "8403"},
-            "KIC": {"first": "Sebastian", "last": "Janikowski", "ID": "8003"},
-            "DEF": {"city": "Chicago", "team": "Bears", "ID": "60"},
-            "Team": {"name": "Team #12"}
+        "QB1": {"first": "Kirk", "last": "Cousins", "ID": "8731"},
+        "QB2": {"first": "Cam", "last": "Newton", "ID": "6294"},
+        "RB1": {"first": "Todd", "last": "Gurley II", "ID": "8469"},
+        "RB2": {"first": "Matt", "last": "Breida", "ID": "13466"},
+        "RB3": {"first": "Dion", "last": "Lewis", "ID": "7557"},
+        "RB4": {"first": "Duke", "last": "Johnson Jr.", "ID": "6560"},
+        "WR1": {"first": "Stefon", "last": "Diggs", "ID": "7471"},
+        "WR2": {"first": "Emmanuel", "last": "Sanders", "ID": "6756"},
+        "WR3": {"first": "Robby", "last": "Anderson", "ID": "9961"},
+        "WR4": {"first": "Courtland", "last": "Sutton", "ID": "14682"},
+        "WR5": {"first": "Michael", "last": "Crabtree", "ID": "7930"},
+        "WR6": {"first": "Vance", "last": "McDonald", "ID": "8403"},
+        "KIC": {"first": "Sebastian", "last": "Janikowski", "ID": "8003"},
+        "DEF": {"city": "Chicago", "team": "Bears", "ID": "60"},
+        "Team": {"name": "Team #12"}
     }
 ]
