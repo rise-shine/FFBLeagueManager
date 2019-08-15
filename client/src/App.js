@@ -13,8 +13,14 @@ import Teams from "./Layouts/Teams";
 
 export default class App extends Component {
   state = {
-    players
+    players,
+    username:"",
+    password:"",
+    
+    
   }
+
+  
 
   getHomeByTeam() {
     return Object.entries(this.state.players.reduce((players, player) => {

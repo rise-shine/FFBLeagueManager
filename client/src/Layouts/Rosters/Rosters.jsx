@@ -21,7 +21,8 @@ export default class Rosters extends React.Component {
 
   state = {
     roster: [],
-    rows: []
+    rows: [],
+    authenticated: true
   };
 
   componentDidMount() {
@@ -66,8 +67,18 @@ export default class Rosters extends React.Component {
   render() {
 
     return (
+  
+      <container>
+       {this.state.authenticated === true &&
+       <>
       <SimpleTable rows={this.state.rows}/>
+      </>}
+
+      {this.state.authenticated === false && 
+      <h1>Please log in to view this page</h1>}
+      }
+      </container>
     );
   }
+  }
 
-}

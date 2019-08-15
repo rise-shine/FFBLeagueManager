@@ -8,7 +8,9 @@ class NotLoggedIn extends React.Component {
     super(props);
 
     this.state = {
-      authenticated: false
+      authenticated: false,
+      
+
      
     };
     console.log(this.state)
@@ -20,17 +22,17 @@ validateForm() {
 
 handleChange = event => {
     this.setState({
-        [event.target.name]: event.target.value,
-        authenticated:true
+        [event.target.name]: event.target.value,   
     });
 }
 
 handleSubmit = event => {
     event.preventDefault();
+
+    
+    
 }
-classes(){
-  return
-}
+
 render(){
 
   return ( 
@@ -44,12 +46,21 @@ render(){
             <h3>Logging in allows you to access more features</h3>
             <div className="Login">
                 <form onSubmit={this.handleSubmit}>
+                <div className="form-group">
+                        <label htmlFor="Password"><h3>Username</h3></label>
+                        <input
+                            type="username"
+                            className="form-control"
+                            name="usernameInput"
+                            placeholder="Username"
+                            onChange={this.handleChange} />
+                    </div>
                     <div className="form-group">
                         <label htmlFor="Email"><h3>Email</h3></label>
                         <input
                             type="email"
                             className="form-control"
-                            name="exampleInputEmail1"
+                            name="emailInput"
                             placeholder="Email"
                         
                             onChange={this.handleChange} />
@@ -59,7 +70,7 @@ render(){
                         <input
                             type="password"
                             className="form-control"
-                            name="exampleInputPassword1"
+                            name="passwordInput"
                             placeholder="Password"
                             onChange={this.handleChange} />
                     </div>
@@ -115,6 +126,16 @@ render(){
 
                             </div>
                             <div className="modal-body">
+                            <div className="form-group">
+                                    <label htmlFor="createUsername">Email address</label>
+                                    <input
+                                        type="email"
+                                        className="form-control"
+                                        id="username"
+                                        placeholder="Enter valid email address"
+                                        value={this.state.username}
+                                        onChange={this.handleChange} />
+                                </div>
                                 <div className="form-group">
                                     <label htmlFor="createEmail">Email address</label>
                                     <input

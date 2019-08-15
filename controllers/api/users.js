@@ -34,7 +34,7 @@ router.get("/welcome/:email/:password", function(req, res) {
       } else if (req.params.password === response.dataValues.password) {
         console.log(
           response.dataValues.id,
-          response.dataValues.name,
+          response.dataValues.username,
           response.dataValues.email
         );
         res.json({
@@ -49,12 +49,12 @@ router.get("/welcome/:email/:password", function(req, res) {
 });
 
 router.post("/create", function(req, res) {
-  const { name, email, password } = req.body;
+  const { username, email, password } = req.body;
 
-  console.log(name, email, password);
+  console.log(username, email, password);
 
   db.User.create({
-    name: name,
+    username: username,
     email: email,
     password: password
   })
@@ -62,7 +62,7 @@ router.post("/create", function(req, res) {
       console.log(response.dataValues.id, response.dataValues.name);
       res.json({
         userID: response.dataValues.id,
-        name: response.dataValues.name
+        username: response.dataValues.username
       });
     })
     .catch(err => {
