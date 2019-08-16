@@ -130,6 +130,7 @@ function defensiveScoring(game) {
     parseInt(game.stats.PrTD["#text"]) * 6 +
     parseInt(game.stats.FumTD["#text"]) * 6 +
     parseInt(game.stats.IntTD["#text"]) * 6;
+
   db.Playerstat.update(
     {
       FantasyScore: fantasyTotal
@@ -212,7 +213,7 @@ router.get("/stats", function(req, res) {
     //this returns stats for all defenses for a specific date
     method: "GET",
     url:
-      "/pull/nfl/2018-regular/team_gamelogs.json?team=63&date=from-20181004-to-20181008",
+      "/pull/nfl/2018-regular/team_gamelogs.json?team=team=det,no,nyj,nyg,chi,lac,kc,sea,tb,min,mia,ne,car,bal,cin,jax,pit,ari,cin,buf,atl,den,gb,cle,la,hou,was,dal,phi,sf,ind,ten&date=from-20181004-to-20181008",
     baseURL: "https://api.mysportsfeeds.com/v1.2",
     headers: {
       Authorization: "Basic " + key
