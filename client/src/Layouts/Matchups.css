@@ -1,20 +1,19 @@
-.rosterText{
+.scheduleTextBold{
     font-weight: bold;
-    font-size: medium;
+    font-size: 20px;
+    margin-left: 80px;
 }
 
-.teamNameText{
-    padding-top:10px;
-    font-weight: bold;
-    font-size: medium;
-    margin-left: 60px;
+.scheduleText{
+    font-size: 20px;
 }
 
-li{
-    font-size: medium
+#scheduleDiv{
+    margin-left:30px;
+    margin-top:15px;
 }
 
-.teamsDiv{
+.weekDiv{
     margin-top: 30px;
     border: 1px solid black;
     border-radius:5px;
@@ -24,10 +23,10 @@ li{
     margin-left: 15px;
     margin-right: 5px;
     box-shadow: 5px 5px 1px grey;
-    background-color: rgb(227, 227, 253);
+    background-color: rgb(227, 227, 253); 
 }
 
-.teamsDiv:hover{
+.weekDiv:hover{
     background-color: rgb(194, 194, 248);
     -webkit-transform: scale(1.08);
     -ms-transform: scale(1.08);
