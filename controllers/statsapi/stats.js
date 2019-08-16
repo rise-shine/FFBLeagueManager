@@ -102,32 +102,35 @@ function offensiveScoring(game) {
 }
 
 //this is used to store statistics for team defense scoring
-function defenseAdd(game) {
+function defensiveAdd(game) {
   let gameWeek = 1;
   db.Playerstat.create({
     TeamID: game.team.ID,
+    GameWeek: gameWeek,
     LastName: game.team.Name,
-    FirstName: gameteam.City,
+    FirstName: game.team.City,
     Sacks: game.stats.Sacks["#text"],
     Safties: game.stats.Safeties["#text"],
-    IntTD: game.stats.IntTD["#text"],
+    IntTd: game.stats.IntTD["#text"],
     int: game.stats.Interceptions["#text"],
     KrTd: game.stats.KrTD["#text"],
     PrTd: game.stats.PrTD["#text"],
-    FumTD: game.stats.FumTD["#text"]
+    FumTd: game.stats.FumTD["#text"]
   });
 }
 
 function defensiveScoring(game) {
   let gameWeek = 1;
+
   let fantasyTotal =
-    parseInt(game.stats.Sacks["#text"]) +
+    parseInt(game.stats.Sacks["#text"]) * 1 +
     parseInt(game.stats.Safeties["#text"]) * 2 +
-    parseInt(game.stats.Interceptions["#text"]) +
+    parseInt(game.stats.Interceptions["#text"]) * 1 +
     parseInt(game.stats.KrTD["#text"]) * 6 +
     parseInt(game.stats.PrTD["#text"]) * 6 +
     parseInt(game.stats.FumTD["#text"]) * 6 +
     parseInt(game.stats.IntTD["#text"]) * 6;
+
   db.Playerstat.update(
     {
       FantasyScore: fantasyTotal
@@ -144,11 +147,12 @@ function defensiveScoring(game) {
 
 // Defining how Express will work with the API Routes
 router.get("/stats", function(req, res) {
+  console.log("sending query");
+
   axios({
     //this returns stats for all players for a specific date
     method: "GET",
-    url:
-      "/pull/nfl/2018-regular/daily_player_stats.json?fordate=20181014&team=62",
+    url: "/pull/nfl/2018-regular/daily_player_stats.json?fordate=20181014",
 
     baseURL: "https://api.mysportsfeeds.com/v1.2",
     headers: {
@@ -159,7 +163,6 @@ router.get("/stats", function(req, res) {
       let data = response.data.dailyplayerstats.playerstatsentry;
       let playerData = data.map(function(x) {
         let position = x.player.Position;
-        console.log(position);
 
         switch (position) {
           case "QB":
@@ -202,13 +205,38 @@ router.get("/stats", function(req, res) {
     })
 
     .catch(function(error) {
+      res.send("there is an error");
+      console.log(error);
+    });
+
+  axios({
+    //this returns stats for all defenses for a specific date
+    method: "GET",
+    url:
+      "/pull/nfl/2018-regular/team_gamelogs.json?team=team=det,no,nyj,nyg,chi,lac,kc,sea,tb,min,mia,ne,car,bal,cin,jax,pit,ari,cin,buf,atl,den,gb,cle,la,hou,was,dal,phi,sf,ind,ten&date=from-20181004-to-20181008",
+    baseURL: "https://api.mysportsfeeds.com/v1.2",
+    headers: {
+      Authorization: "Basic " + key
+    }
+  })
+    .then(function(response) {
+      let data = response.data.teamgamelogs.gamelogs;
+      console.log(response);
+      res.send(data);
+      let defData = data.map(function(x) {
+        defensiveAdd(x);
+        defensiveScoring(x);
+        return x.team.ID;
+      });
+    })
+
+    .catch(function(error) {
       console.log(error);
     });
 });
-
 // If no API routes are hit, send the React app
 router.use(function(req, res) {
-  res.sendFile(path.join(__dirname, "../controllers/index2.html"));
+  res.send("no path specified");
 });
 
 module.exports = router;
