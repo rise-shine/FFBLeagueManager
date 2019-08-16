@@ -1,6 +1,6 @@
 import React from 'react';
 import './NotLoggedIn.css'
-import { Link } from "react-router-dom";
+import { Redirect } from "react-router-dom";
 import axios from 'axios'
 import { ENAMETOOLONG } from 'constants';
 
@@ -30,20 +30,31 @@ class NotLoggedIn extends React.Component {
     handleSubmit = event => {
         event.preventDefault();
         const { email, password } = this.state;
-        axios.post("/api/users/login", { email, password})
-        .then(response=>{
-            console.log(response)
-            if(response.data.token){
-                this.setState({
-                       authenticated: true 
-                    
+        axios.post("/api/users/login", { email, password })
+            .then(response => {
+                console.log(response)
+                if (response.data.token) {
+                    alert("login successful!")
+                    this.setState({
+                        authenticated: true
                     })
-            console.log(this.state.authenticated)
+                
+                
 
-            }
-        }).catch(function(err){
-            console.log("login failed")
-        })
+                }
+                else if(!response.data.token){
+                    alert("Account not found")
+                }
+            }).catch(function (err) {
+                console.log("login failed")
+                alert("login failed, try again")
+            })
+
+    }
+    renderRedirect = () => {
+        if (this.state.authenticated) {
+            return <Redirect to='/home' />
+        }
     }
     handleSignUp = event => {
         event.preventDefault();
@@ -108,46 +119,35 @@ class NotLoggedIn extends React.Component {
                             <p
                                 id="createNewAccount"
                                 data-toggle="modal"
-                                data-target="#loginModal">
+                                data-target="#signUpModal">
                                 Create new account?
                      </p>
 
-                            {this.state.authenticated === false &&
-                                <>
-                                    <button
-                                        type="submit"
-                                        className="btn btn-primary"
-                                        data-toggle="modal"
-                                        data-target="#didntWorkModal">
-                                        Login
+
+                            <>
+                                <button
+                                    type="submit"
+                                    className="btn btn-primary"
+                                    data-toggle="modal"
+                                    data-target="#didntWorkModal">
+                                    Login
              </button>
-                                    <div id="didntWorkModal" className="modal fade" role="dialog">
-                                        <div className="modal-dialog">
-                                            <div className="modal-content">
-                                                <div className="modal-header">
-                                                    <button type="button" className="close" data-dismiss="modal">&times;</button>
-                                                </div>
-                                                <div className="modal-body">
-                                                    <h3>Email/Password Incorrect</h3>
-                                                    <p>Please try again</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </>
+                                <div>
+                                    {this.renderRedirect()}
+                                </div>
+
+                               
+                            </>
 
                             }
-                            {this.state.authenticated === true &&
-                                <>
-                                    <Link to="/home" className={window.location.pathname === "/home" ? "nav-link active" : "nav-link"}>
-                                        <button type="button" className="btn btn-primary">Login</button>
-                                    </Link>
-                                </>
-                            }
+
+
+
+
 
                         </form>
 
-                        <div id="loginModal" className="modal fade" role="dialog">
+                        <div id="signUpModal" className="modal fade" role="dialog">
                             <form>
                                 <div className="modal-dialog">
                                     <div className="modal-content">
