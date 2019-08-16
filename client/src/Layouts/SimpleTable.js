@@ -131,8 +131,8 @@ return (
 <TableCell className={classes.header} align="center">Week</TableCell>
 <TableCell className={classes.header} align="center">Date</TableCell>
 <TableCell className={classes.header} align="center">Location</TableCell>
-<TableCell className={classes.header} align="center">Home T.</TableCell>
-<TableCell className={classes.header} align="center">Away T.</TableCell>
+<TableCell className={classes.header} align="center">Home</TableCell>
+<TableCell className={classes.header} align="center">Away</TableCell>
 </TableRow>
 
 

@@ -44,10 +44,13 @@ export default class App extends Component {
 
       <Router>
       <div>
-        <Navbar />
+       
         <Switch>
+           
           <Route exact path ="/" component={NotLoggedIn}/>
+          
           <Route exact path="/home"
+        
           render={props => (
               <Home
                 {...props}
@@ -56,12 +59,16 @@ export default class App extends Component {
 
               />
           )}
+         
           />
-          <Route exact path="/roster" component={Rosters}/>
+           
+          <Route exact path="/roster" component={ Rosters }/>
           <Route exact path="/schedule" component={Schedule}/>
           <Route exact path="/teams" component={Teams}/>
+          
         </Switch>
-        <Drawer/>
+       
+      
       </div>
     </Router>
 

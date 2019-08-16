@@ -64,6 +64,7 @@ render() {
 <div class="tab-content">
   <div id="home" class="tab-pane fade in active">
     <h3>News</h3>
+    <p>Coming soon!</p>
   </div>
   <div id="menu1" class="tab-pane fade">
     <h3>Injuries</h3>

@@ -1,13 +1,16 @@
 import React from "react";
 import schedule from "../schedule.json";
 import '../Layouts/Schedule.css';
+import Drawer from "../../Home/Drawer"
 
 export default class Schedule extends React.Component {
 
     state = {
         schedule
     }
-    render() {
+    render() 
+    {
+        <Drawer />
 
         console.log(this.state.schedule)
 
@@ -17,6 +20,7 @@ export default class Schedule extends React.Component {
                 {this.state.schedule.map(game => {
 
                     return (
+                         
                         <div id="scheduleDiv">
                             <span class="scheduleTextBold">Week 1: </span>
                             <ul>

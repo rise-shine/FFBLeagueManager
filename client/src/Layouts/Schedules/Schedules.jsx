@@ -2,6 +2,7 @@
 import React from 'react'
 import axios from 'axios';
 import SimpleTable from "../SimpleTable";
+import Drawer from "../../Home/Drawer"
 
 const buf = Buffer.from(
   "d2a3f8bb-9b97-4e5a-97ef-5d2a60" + ":" + "Lokidog01",
@@ -66,6 +67,7 @@ export default class Rosters extends React.Component {
       <container>
       {this.state.authenticated === true &&
       <>
+      <Drawer />
      <SimpleTable rows={this.state.rows}/>
      </>}
 

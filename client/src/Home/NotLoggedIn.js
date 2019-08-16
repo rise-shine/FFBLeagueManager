@@ -138,13 +138,7 @@ class NotLoggedIn extends React.Component {
 
                                
                             </>
-
                             }
-
-
-
-
-
                         </form>
 
                         <div id="signUpModal" className="modal fade" role="dialog">

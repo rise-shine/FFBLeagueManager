@@ -1,7 +1,7 @@
 import React from "react";
 import rosters from "../rosters.json";
 import '../Layouts/Teams.css';
-
+import Drawer from "../Home/Drawer.js"
 export default class Roster extends React.Component {
 
     state = {
@@ -10,11 +10,13 @@ export default class Roster extends React.Component {
 
     
     render() {
-
+       
         console.log(this.state.rosters)
 
         return (
+        <>
 
+            <Drawer />
            <div>
                 {this.state.rosters.map(player => {
 
@@ -42,7 +44,9 @@ export default class Roster extends React.Component {
                     
                 })}
            </div>
+           </>
 
         )
     }
+    
 }
