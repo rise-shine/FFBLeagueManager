@@ -4,8 +4,18 @@
     margin-left: 80px;
 }
 
+.playoffTextBold{
+    font-weight: bold;
+    font-size: 20px;
+    margin-left: 15px;
+}
 .scheduleText{
     font-size: 20px;
+}
+
+.scheduleTextItalics{
+    font-size: 20px;
+    font-style: italic;
 }
 
 #scheduleDiv{
@@ -28,6 +38,26 @@
 
 .weekDiv:hover{
     background-color: rgb(194, 194, 248);
+    -webkit-transform: scale(1.08);
+    -ms-transform: scale(1.08);
+    transform: scale(1.08);
+}
+
+.playoffDiv{
+    margin-top: 30px;
+    border: 1px solid black;
+    border-radius:5px;
+    background-color:azure;
+    width: 23%;
+    display: inline-block;
+    margin-left: 15px;
+    margin-right: 5px;
+    box-shadow: 5px 5px 1px grey;
+    background-color: rgb(155, 248, 178); 
+}
+
+.playoffDiv:hover{
+    background-color: rgb(44, 247, 94);
     -webkit-transform: scale(1.08);
     -ms-transform: scale(1.08);
     transform: scale(1.08);

@@ -172,6 +172,39 @@ export default class Matchups extends React.Component {
                                 <li><span class="scheduleText">{game.week14.game6[0]} vs. {game.week14.game6[1]}</span></li>
                             </ul>
                             </div>
+                            <div class="playoffDiv">
+                            <span class="playoffTextBold">Playoffs - Quarter Finals: </span>
+                            <ul>
+                                <li><span class="scheduleText">#3 Seed vs. #6 Seed</span></li>
+                                <li><span class="scheduleText">#4 Seed vs. #5 Seed</span></li>
+                                <li><span class="scheduleText">#1 Seed - Bye Week</span></li>
+                                <li><span class="scheduleText">#2 Seed - Bye Week</span></li>
+                                <li><span class="scheduleTextItalics">Optional Game</span></li>
+                                <li><span class="scheduleTextItalics">Optional Game</span></li>
+                            </ul>
+                            </div>
+                            <div class="playoffDiv">
+                            <span class="playoffTextBold">Playoffs - Semi Finals: </span>
+                            <ul>
+                                <li><span class="scheduleText">#1 Seed vs. Winner</span></li>
+                                <li><span class="scheduleText">#2 Seed vs. Winner</span></li>
+                                <li><span class="scheduleText">Loser vs. Loser</span></li>
+                                <li><span class="scheduleTextItalics">Optional Game</span></li>
+                                <li><span class="scheduleTextItalics">Optional Game</span></li>
+                                <li><span class="scheduleTextItalics">Optional Game</span></li>
+                            </ul>
+                            </div>
+                            <div class="playoffDiv">
+                            <span class="playoffTextBold">Playoffs - Finals: </span>
+                            <ul>
+                                <li><span class="scheduleText">Winner vs. Winner</span></li>
+                                <li><span class="scheduleText">Loser vs. Loser</span></li>
+                                <li><span class="scheduleTextItalics">Optional Game</span></li>
+                                <li><span class="scheduleTextItalics">Optional Game</span></li>
+                                <li><span class="scheduleTextItalics">Optional Game</span></li>
+                                <li><span class="scheduleTextItalics">Optional Game</span></li>
+                            </ul>
+                            </div>
                         </div>
                     )
                     
