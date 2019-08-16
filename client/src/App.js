@@ -17,6 +17,8 @@ export default class App extends Component {
     players
   }
 
+  
+
   getHomeByTeam() {
     return Object.entries(this.state.players.reduce((players, player) => {
       const { team } = player
@@ -43,23 +45,31 @@ export default class App extends Component {
 
       <Router>
       <div>
-        <Navbar />
+       
         <Switch>
+           
           <Route exact path ="/" component={NotLoggedIn}/>
+          
           <Route exact path="/home"
+        
           render={props => (
               <Home
                 {...props}
                 players = {players}
+               
+
               />
           )}
+         
           />
-          <Route exact path="/roster" component={Rosters}/>
+           
+          <Route exact path="/roster" component={ Rosters }/>
           <Route exact path="/schedule" component={Schedule}/>
           <Route exact path="/teams" component={Teams}/>
           <Route exact path="/matchups" component={Matchups}/>
         </Switch>
-        <Drawer/>
+       
+      
       </div>
     </Router>
 

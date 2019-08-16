@@ -2,6 +2,7 @@
 import React from 'react'
 import axios from 'axios';
 import SimpleTable from "../SimpleTable";
+import Drawer from "../../Home/Drawer"
 
 const buf = Buffer.from(
   "d2a3f8bb-9b97-4e5a-97ef-5d2a60" + ":" + "Lokidog01",
@@ -20,7 +21,8 @@ const rows = []
 export default class Rosters extends React.Component {
 
   state = {
-    rows: []
+    rows: [],
+    authenticated: true
   };
 
   componentDidMount() {
@@ -62,7 +64,17 @@ export default class Rosters extends React.Component {
   render() {
 
     return (
-      <SimpleTable rows={this.state.rows}/>
+      <container>
+      {this.state.authenticated === true &&
+      <>
+      <Drawer />
+     <SimpleTable rows={this.state.rows}/>
+     </>}
+
+     {this.state.authenticated === false && 
+     <h1>Please log in to view this page</h1>}
+     }
+     </container>
     );
   }
 

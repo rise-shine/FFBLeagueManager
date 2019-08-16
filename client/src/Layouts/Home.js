@@ -3,11 +3,16 @@ import { Grid, Paper, Typography, List } from "@material-ui/core";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemText from "@material-ui/core/ListItemText";
 import News from './News/News.jsx'
+import Navbar from "../Home/Navbar/Navbar"
+import Drawer from "../Home/Drawer.js"
 const style = {
   Paper: { padding: 20, margin: 10 }
 };
 
 export default ({ players }) => (
+  <>
+  <Drawer />
+  
   <Grid container>
     <Grid item sm>
       <Paper style={style.Paper}>
@@ -31,4 +36,5 @@ export default ({ players }) => (
       <News />
     </Grid>
   </Grid>
+  </>
 );

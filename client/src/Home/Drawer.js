@@ -191,7 +191,7 @@ export default function PersistentDrawerLeft() {
           <TrendingIcon />
         </IconButton>
         <Link to="/schedule" className={window.location.pathname === "/schedule" ? "nav-link active" : "nav-link"}>
-        <p>Schedule/Ranking</p>
+        <p>Schedule</p>
         </Link>
       </MenuItem>  
       <MenuItem>
@@ -261,7 +261,7 @@ export default function PersistentDrawerLeft() {
 
           <div className={classes.sectionDesktop}>
           <Link to="/schedule" className={window.location.pathname === "/schedule" ? "nav-link active" : "nav-link"}>
-         <h4>Schedule/Ranking</h4>
+         <h4>Schedule</h4>
          </Link>
               <IconButton aria-label="show 4 new mails" color="inherit" id="trendingIcon">
                 <TrendingIcon />

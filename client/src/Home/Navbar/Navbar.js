@@ -89,7 +89,8 @@ export default function PrimarySearchAppBar() {
       <MenuItem onClick={handleMenuClose}>Profile</MenuItem>
  
       <MenuItem 
-      onClick={handleMenuClose}>
+      onClick={handleMenuClose}
+>
         <Link to="/" className={window.location.pathname === "/" ? "nav-link active" : "nav-link"}>
            Log Out
             </Link>
