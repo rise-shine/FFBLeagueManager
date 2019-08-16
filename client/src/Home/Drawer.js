@@ -212,6 +212,20 @@ export default function PersistentDrawerLeft() {
         >
           <AccountCircle />
         </IconButton>
+        <Link to="/matchups" className={window.location.pathname === "/matchups" ? "nav-link active" : "nav-link"}>
+          <p>Matchups</p>
+        </Link>
+      </MenuItem>
+      
+      <MenuItem onClick={handleProfileMenuOpen}>
+        <IconButton
+          aria-label="account of current user"
+          aria-controls="primary-search-account-menu"
+          aria-haspopup="true"
+          color="inherit"
+        >
+          <AccountCircle />
+        </IconButton>
         <Link to="/teams" className={window.location.pathname === "/teams" ? "nav-link active" : "nav-link"}>
         <p>Teams</p>
         </Link>
@@ -254,6 +268,12 @@ export default function PersistentDrawerLeft() {
               </IconButton>
             <Link to="/roster" className={window.location.pathname === "/roster" ? "nav-link active" : "nav-link"}>
              <h4>Roster</h4>
+            </Link>
+            <IconButton aria-label="show 17 new notifications" color="inherit" id="favoriteIcon">
+              <FavoriteIcon />
+            </IconButton>
+            <Link to="/matchups" className={window.location.pathname === "/matchups" ? "nav-link active" : "nav-link"}>
+             <h4>Matchups</h4>
             </Link>
             <IconButton aria-label="show 17 new notifications" color="inherit" id="favoriteIcon">
               <FavoriteIcon />

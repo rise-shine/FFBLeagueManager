@@ -1,8 +1,8 @@
 import React from "react";
 import schedule from "../schedule.json";
-import '../Layouts/Schedule.css';
+import '../Layouts/Matchups.css';
 
-export default class Schedule extends React.Component {
+export default class Matchups extends React.Component {
 
     state = {
         schedule
@@ -18,6 +18,7 @@ export default class Schedule extends React.Component {
 
                     return (
                         <div id="scheduleDiv">
+                            <div class="weekDiv">
                             <span class="scheduleTextBold">Week 1: </span>
                             <ul>
                                 <li><span class="scheduleText">{game.week1.game1[0]} vs. {game.week1.game1[1]}</span></li>
@@ -27,7 +28,8 @@ export default class Schedule extends React.Component {
                                 <li><span class="scheduleText">{game.week1.game5[0]} vs. {game.week1.game5[1]}</span></li>
                                 <li><span class="scheduleText">{game.week1.game6[0]} vs. {game.week1.game6[1]}</span></li>
                             </ul>
-
+                            </div>
+                            <div class="weekDiv">
                             <span class="scheduleTextBold">Week 2: </span>
                             <ul>
                                 <li><span class="scheduleText">{game.week2.game1[0]} vs. {game.week2.game1[1]}</span></li>
@@ -37,7 +39,8 @@ export default class Schedule extends React.Component {
                                 <li><span class="scheduleText">{game.week2.game5[0]} vs. {game.week2.game5[1]}</span></li>
                                 <li><span class="scheduleText">{game.week2.game6[0]} vs. {game.week2.game6[1]}</span></li>
                             </ul>
-                        
+                            </div>
+                            <div class="weekDiv">
                             <span class="scheduleTextBold">Week 3: </span>
                             <ul>
                                 <li><span class="scheduleText">{game.week3.game1[0]} vs. {game.week3.game1[1]}</span></li>
@@ -47,7 +50,8 @@ export default class Schedule extends React.Component {
                                 <li><span class="scheduleText">{game.week3.game5[0]} vs. {game.week3.game5[1]}</span></li>
                                 <li><span class="scheduleText">{game.week3.game6[0]} vs. {game.week3.game6[1]}</span></li>
                             </ul>
-
+                            </div>
+                            <div class="weekDiv">
                             <span class="scheduleTextBold">Week 4: </span>
                             <ul>
                                 <li><span class="scheduleText">{game.week4.game1[0]} vs. {game.week4.game1[1]}</span></li>
@@ -57,7 +61,8 @@ export default class Schedule extends React.Component {
                                 <li><span class="scheduleText">{game.week4.game5[0]} vs. {game.week4.game5[1]}</span></li>
                                 <li><span class="scheduleText">{game.week4.game6[0]} vs. {game.week4.game6[1]}</span></li>
                             </ul>
-
+                            </div>
+                            <div class="weekDiv">
                             <span class="scheduleTextBold">Week 5: </span>
                             <ul>
                                 <li><span class="scheduleText">{game.week5.game1[0]} vs. {game.week5.game1[1]}</span></li>
@@ -67,7 +72,8 @@ export default class Schedule extends React.Component {
                                 <li><span class="scheduleText">{game.week5.game5[0]} vs. {game.week5.game5[1]}</span></li>
                                 <li><span class="scheduleText">{game.week5.game6[0]} vs. {game.week5.game6[1]}</span></li>
                             </ul>
-
+                            </div>
+                            <div class="weekDiv">
                             <span class="scheduleTextBold">Week 6: </span>
                             <ul>
                                 <li><span class="scheduleText">{game.week6.game1[0]} vs. {game.week6.game1[1]}</span></li>
@@ -77,7 +83,8 @@ export default class Schedule extends React.Component {
                                 <li><span class="scheduleText">{game.week6.game5[0]} vs. {game.week6.game5[1]}</span></li>
                                 <li><span class="scheduleText">{game.week6.game6[0]} vs. {game.week6.game6[1]}</span></li>
                             </ul>
-
+                            </div>
+                            <div class="weekDiv">
                             <span class="scheduleTextBold">Week 7: </span>
                             <ul>
                                 <li><span class="scheduleText">{game.week7.game1[0]} vs. {game.week7.game1[1]}</span></li>
@@ -87,7 +94,8 @@ export default class Schedule extends React.Component {
                                 <li><span class="scheduleText">{game.week7.game5[0]} vs. {game.week7.game5[1]}</span></li>
                                 <li><span class="scheduleText">{game.week7.game6[0]} vs. {game.week7.game6[1]}</span></li>
                             </ul>
-
+                            </div>
+                            <div class="weekDiv">
                             <span class="scheduleTextBold">Week 8: </span>
                             <ul>
                                 <li><span class="scheduleText">{game.week8.game1[0]} vs. {game.week8.game1[1]}</span></li>
@@ -97,7 +105,8 @@ export default class Schedule extends React.Component {
                                 <li><span class="scheduleText">{game.week8.game5[0]} vs. {game.week8.game5[1]}</span></li>
                                 <li><span class="scheduleText">{game.week8.game6[0]} vs. {game.week8.game6[1]}</span></li>
                             </ul>
-
+                            </div>
+                            <div class="weekDiv">
                             <span class="scheduleTextBold">Week 9: </span>
                             <ul>
                                 <li><span class="scheduleText">{game.week9.game1[0]} vs. {game.week9.game1[1]}</span></li>
@@ -107,7 +116,8 @@ export default class Schedule extends React.Component {
                                 <li><span class="scheduleText">{game.week9.game5[0]} vs. {game.week9.game5[1]}</span></li>
                                 <li><span class="scheduleText">{game.week9.game6[0]} vs. {game.week9.game6[1]}</span></li>
                             </ul>                            
-
+                            </div>
+                            <div class="weekDiv">
                             <span class="scheduleTextBold">Week 10: </span>
                             <ul>
                                 <li><span class="scheduleText">{game.week10.game1[0]} vs. {game.week10.game1[1]}</span></li>
@@ -117,7 +127,8 @@ export default class Schedule extends React.Component {
                                 <li><span class="scheduleText">{game.week10.game5[0]} vs. {game.week10.game5[1]}</span></li>
                                 <li><span class="scheduleText">{game.week10.game6[0]} vs. {game.week10.game6[1]}</span></li>
                             </ul>
-
+                            </div>
+                            <div class="weekDiv">
                             <span class="scheduleTextBold">Week 11: </span>
                             <ul>
                                 <li><span class="scheduleText">{game.week11.game1[0]} vs. {game.week11.game1[1]}</span></li>
@@ -127,7 +138,8 @@ export default class Schedule extends React.Component {
                                 <li><span class="scheduleText">{game.week11.game5[0]} vs. {game.week11.game5[1]}</span></li>
                                 <li><span class="scheduleText">{game.week11.game6[0]} vs. {game.week11.game6[1]}</span></li>
                             </ul>                            
-
+                            </div>
+                            <div class="weekDiv">
                             <span class="scheduleTextBold">Week 12: </span>
                             <ul>
                                 <li><span class="scheduleText">{game.week12.game1[0]} vs. {game.week12.game1[1]}</span></li>
@@ -137,7 +149,8 @@ export default class Schedule extends React.Component {
                                 <li><span class="scheduleText">{game.week12.game5[0]} vs. {game.week12.game5[1]}</span></li>
                                 <li><span class="scheduleText">{game.week12.game6[0]} vs. {game.week12.game6[1]}</span></li>
                             </ul>
-
+                            </div>
+                            <div class="weekDiv">
                             <span class="scheduleTextBold">Week 13: </span>
                             <ul>
                                 <li><span class="scheduleText">{game.week13.game1[0]} vs. {game.week13.game1[1]}</span></li>
@@ -147,7 +160,8 @@ export default class Schedule extends React.Component {
                                 <li><span class="scheduleText">{game.week13.game5[0]} vs. {game.week13.game5[1]}</span></li>
                                 <li><span class="scheduleText">{game.week13.game6[0]} vs. {game.week13.game6[1]}</span></li>
                             </ul>
-
+                            </div>
+                            <div class="weekDiv">
                             <span class="scheduleTextBold">Week 14: </span>
                             <ul>
                                 <li><span class="scheduleText">{game.week14.game1[0]} vs. {game.week14.game1[1]}</span></li>
@@ -157,7 +171,7 @@ export default class Schedule extends React.Component {
                                 <li><span class="scheduleText">{game.week14.game5[0]} vs. {game.week14.game5[1]}</span></li>
                                 <li><span class="scheduleText">{game.week14.game6[0]} vs. {game.week14.game6[1]}</span></li>
                             </ul>
-
+                            </div>
                         </div>
                     )
                     

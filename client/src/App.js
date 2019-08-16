@@ -10,6 +10,7 @@ import Drawer from "./Home/Drawer";
 import Schedule from "./Layouts/Schedules/Schedules";
 import NotLoggedIn from "../src/Home/NotLoggedIn"
 import Teams from "./Layouts/Teams";
+import Matchups from "./Layouts/Matchups";
 
 export default class App extends Component {
   state = {
@@ -56,6 +57,7 @@ export default class App extends Component {
           <Route exact path="/roster" component={Rosters}/>
           <Route exact path="/schedule" component={Schedule}/>
           <Route exact path="/teams" component={Teams}/>
+          <Route exact path="/matchups" component={Matchups}/>
         </Switch>
         <Drawer/>
       </div>
