@@ -6,7 +6,7 @@ import Rosters from "./Layouts/Rosters/Rosters";
 import {team , players } from "./team";
 import Navbar from "./Home/Navbar/Navbar";
 // import Sidebar from "./Home/Sidebar/Sidebar"
-import Drawer from "./Home/Drawer";
+
 import Schedule from "./Layouts/Schedules/Schedules";
 import NotLoggedIn from "../src/Home/NotLoggedIn"
 import Teams from "./Layouts/Teams";
@@ -45,11 +45,8 @@ export default class App extends Component {
 
       <Router>
       <div>
-       
-        <Switch>
-           
+        <Switch> 
           <Route exact path ="/" component={NotLoggedIn}/>
-          
           <Route exact path="/home"
         
           render={props => (

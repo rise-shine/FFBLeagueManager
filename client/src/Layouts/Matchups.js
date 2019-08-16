@@ -1,7 +1,7 @@
 import React from "react";
 import schedule from "../schedule.json";
 import '../Layouts/Matchups.css';
-import '../Home/Drawer.js'
+import Drawer from "../Home/Drawer.js"
 export default class Matchups extends React.Component {
 
     state = {
@@ -9,17 +9,18 @@ export default class Matchups extends React.Component {
     }
     render() 
     {
-        <Drawer />
+   
 
         console.log(this.state.schedule)
 
         return (
-
+<>
+<Drawer />
            <div>
                 {this.state.schedule.map(game => {
 
                     return (
-                         
+                     
                         <div id="scheduleDiv">
                             <div class="weekDiv">
                             <span class="scheduleTextBold">Week 1: </span>
@@ -213,7 +214,8 @@ export default class Matchups extends React.Component {
                     
                 })}
            </div>
-
+ </>   
         )
+    
     }
 }
