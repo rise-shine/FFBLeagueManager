@@ -13,11 +13,7 @@ import Teams from "./Layouts/Teams";
 
 export default class App extends Component {
   state = {
-    players,
-    username:"",
-    password:"",
-    authenticated:false,
-    
+    players
   }
 
   

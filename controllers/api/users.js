@@ -12,8 +12,10 @@ process.env.SECRET_KEY = "secret";
 //On Sign Up, the route below will be called.
 router.post("/create", function(req, res) {
 
+  console.log('whatever')
+
   //It will take in the information contained in req.body...
-  var { userName, email, password } = req.body;
+  var { username, email, password } = req.body;
 
   //...encrypt the password...
   var hash = bcrypt.hashSync(password, 10);
@@ -21,7 +23,7 @@ router.post("/create", function(req, res) {
 
   // ...and post the new user in the DB.
   db.User.create({
-    name: userName,
+    username: username,
     email: email,
     password: password
   })
@@ -57,12 +59,16 @@ router.get("/welcome", function(req, res) {
 });
 
 //On Sign In, this route will be called.
-router.post('/welcome/:email/:password', function (req, res) {
-  
+router.post('/login', function (req, res) {
+  console.log('hello');
   //It will try to locate a user that's registered under the same email address our user is trying to sign in with.
+  if (!req.body || !req.body.email || !req.body.password){
+    res.status(403).send('wrong password')
+    return;
+  }
   db.User.findOne({
     where: {
-      email: req.params.email
+      email: req.body.email
     }
   }).then(function (response) {
     
@@ -71,8 +77,13 @@ router.post('/welcome/:email/:password', function (req, res) {
       res.send("You haven't registered an account yet. Click Create New Account to get started.");
     } else {
       //Otherwise, it will compare the password entered by the user with the encrypted password contained in the DB and allow the user to sign in if they match.
-      bcrypt.compare(req.params.password, response.password, function (err, result) {
-        res.json(result);
+      bcrypt.compare(req.body.password, response.password, function (err, result) {
+        console.log(result);
+        
+      var token = jwt.sign({ email: response.email}, process.env.SECRET_KEY, {
+        expiresIn: 1440 
+      });
+        res.json({ token });
       });
     }
   });
