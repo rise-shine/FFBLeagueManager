@@ -10,6 +10,7 @@ https://ffbleaguemanager.herokuapp.com/
 <h3>Release 1.0 Minimum Viable Product (MVP)</h3>
 
 - Users are able to create an account, sign in, and view various pages displaying important Fantasy Football related information
+<br>
 **Login Screen**
 ![Login screen](https://github.com/rise-shine/FFBLeagueManager/blob/master/client/public/images/Home.png)
 **Home Page**
