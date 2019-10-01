@@ -10,9 +10,9 @@ https://ffbleaguemanager.herokuapp.com/
 <h3>Release 1.0 Minimum Viable Product (MVP)</h3>
 
 - Users are able to create an account, sign in, and view various pages displaying important Fantasy Football related information
-
-![Login screen](public/images/Login.png)
-
+**Login Screen**
+![Login screen](https://github.com/rise-shine/FFBLeagueManager/blob/master/client/public/images/Home.png)
+**Home Page**
 ![Home page](https://github.com/rise-shine/FFBLeagueManager/blob/master/client/public/images/Home.png)
 
 
@@ -33,10 +33,14 @@ https://ffbleaguemanager.herokuapp.com/
 
 4. When logged in, the user can view several generalized pages (in future updates, these pages could remain this way or be customized to suit a particular user's desired information).
 These pages include: 
-![A general NFL schedule](public/images/nflsched.png)
-![Current NFL roster](public/images/nflrost.png)
-![A mocked-up Fantasy schedule](public/images/matchupmock.png)
-![An example of what potential Fantasy teams would look like](public/images/sample.png)
+**A general NFL schedule**
+![A general NFL schedule](https://github.com/rise-shine/FFBLeagueManager/blob/master/client/public/images/nflsched.png)
+**Current NFL roster**
+![Current NFL roster](https://github.com/rise-shine/FFBLeagueManager/blob/master/client/public/images/nflrost.png)
+**A mock-up of a Fantasy League schedule**
+![A mocked-up Fantasy schedule](https://github.com/rise-shine/FFBLeagueManager/blob/master/client/public/images/matchupmock.png)
+**An example of what a a potential Fantasy team would look like**
+![An example of what potential Fantasy teams would look like](https://github.com/rise-shine/FFBLeagueManager/blob/master/client/public/images/sample.png)
 
 5. Clicking log out will return the user to the login page.
 
