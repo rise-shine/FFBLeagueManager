@@ -13,7 +13,7 @@ https://ffbleaguemanager.herokuapp.com/
 
 ![Login screen](public/images/Login.png)
 
-![Home page](public/images/Home.png)
+![Home page](https://github.com/rise-shine/FFBLeagueManager/blob/master/client/public/images/Home.png)
 
 
 
