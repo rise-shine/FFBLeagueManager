@@ -10,7 +10,7 @@ https://ffbleaguemanager.herokuapp.com/
 <h3>Release 1.0 Minimum Viable Product (MVP)</h3>
 
 - Users are able to create an account, sign in, and view various pages displaying important Fantasy Football related information
-<br>
+
 **Login Screen**
 ![Login screen](https://github.com/rise-shine/FFBLeagueManager/blob/master/client/public/images/Home.png)
 **Home Page**
@@ -26,14 +26,17 @@ https://ffbleaguemanager.herokuapp.com/
 2. The user can either log in using their credentials, or create a new account For the purposes of demonstration, anyone can login in using the following crendentials.
 
 **Username** test
+<br>
 **Email** test@test.com
+<br>
 **Password** test
 
 3. Once logged in the user is redirected to the homepage. Currently, the page is limited, with mostly placeholder images and text. Future updates are planned to include general sports news and player injuries. Additionally, a user would be able to swap out players from this screen.
-(public/images/Home)
+
 
 4. When logged in, the user can view several generalized pages (in future updates, these pages could remain this way or be customized to suit a particular user's desired information).
-These pages include: 
+These pages include:
+<br>
 **A general NFL schedule**
 ![A general NFL schedule](https://github.com/rise-shine/FFBLeagueManager/blob/master/client/public/images/nflsched.png)
 **Current NFL roster**
