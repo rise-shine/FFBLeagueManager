@@ -38,13 +38,15 @@ https://ffbleaguemanager.herokuapp.com/
 These pages include:
 <br>
 **A general NFL schedule**
-![A general NFL schedule](https://github.com/rise-shine/FFBLeagueManager/blob/master/client/public/images/nflsched.png)
+
+![schedule](https://github.com/rise-shine/FFBLeagueManager/blob/master/client/public/images/nflsched.png)
 **Current NFL roster**
-![Current NFL roster](https://github.com/rise-shine/FFBLeagueManager/blob/master/client/public/images/nflrost.png)
+
+![roster](https://github.com/rise-shine/FFBLeagueManager/blob/master/client/public/images/nflrost.png)
 **A mock-up of a Fantasy League schedule**
-![A mocked-up Fantasy schedule](https://github.com/rise-shine/FFBLeagueManager/blob/master/client/public/images/matchupmock.png)
+![ffs](https://github.com/rise-shine/FFBLeagueManager/blob/master/client/public/images/matchupmock.png)
 **An example of what a a potential Fantasy team would look like**
-![An example of what potential Fantasy teams would look like](https://github.com/rise-shine/FFBLeagueManager/blob/master/client/public/images/sample.png)
+![fft](https://github.com/rise-shine/FFBLeagueManager/blob/master/client/public/images/sample.png)
 
 5. Clicking log out will return the user to the login page.
 
@@ -79,15 +81,15 @@ Ability to add players to an individual user's Fantasy Team.
 
 <h3>The Team</h3>
 
-**Amanda L. Ragone:** 
+**Amanda L. Ragone** 
 
-**Halon J. Hamilton:** 
+**Halon J. Hamilton** 
 
-**Jacob Smith:** 
+**Jacob Smith** 
 
-**Mike Garringer:** 
+**Mike Garringer** 
 
-**Troy Fasnacht:** 
+**Troy Fasnacht** 
 
 
 <h3>Project Management</h3>
