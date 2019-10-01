@@ -1,68 +1,94 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h1>Fantasy Football League Manager</h1>
+<h2>An simple Fantasy Football app.</h2>
 
-## Available Scripts
+The goal in this project is to create an app that allows a user to access all the information they would need to effectively run a Fantasy Football team or league.
 
-In the project directory, you can run:
+The app is deployed using Heroku at 
+https://ffbleaguemanager.herokuapp.com/
 
-### `npm start`
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+<h3>Release 1.0 Minimum Viable Product (MVP)</h3>
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+- Users are able to create an account, sign in, and view various pages displaying important Fantasy Football related information
 
-### `npm test`
+![Login screen](public/images/Login.png)
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+![Home page](public/images/Home.png)
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<h3>Using the App</h3>
 
-### `npm run eject`
+1. Go to https://ffbleaguemanager.herokuapp.com/
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+2. The user can either log in using their credentials, or create a new account For the purposes of demonstration, anyone can login in using the following crendentials.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+**Username** test
+**Email** test@test.com
+**Password** test
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+3. Once logged in the user is redirected to the homepage. Currently, the page is limited, with mostly placeholder images and text. Future updates are planned to include general sports news and player injuries. Additionally, a user would be able to swap out players from this screen.
+(public/images/Home)
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+4. When logged in, the user can view several generalized pages (in future updates, these pages could remain this way or be customized to suit a particular user's desired information).
+These pages include: 
+A general NFL schedule -
+(public/images/nflsched.png)
+Current NFL roster - 
+(public/images/nflrost.png)
+A mocked-up Fantasy schedule -
+(public/images/matchupmock.png)
+An example of what potential Fantasy teams would look like -
+(public/images/sample.png)
 
-## Learn More
+5. Clicking log out will return the user to the login page.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+<h3>MVP - How the App was developed</h3>
 
-### Code Splitting
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+**Phase One - Defining MVP 1.0:** 
+Since the app was created before the start of the season, MVP was defined as being able to look up very general information. Future updates would change information as the season progresses.
 
-### Analyzing the Bundle Size
+ Layout - The website doesn't break from simple page changes and is mobile responsive.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+Login - The user should be able to create a new account with an encrypted password. This password should be stored in a way that the user can log in if they return to the page at a later time.
 
-### Making a Progressive Web App
+- Front End Functionality - The user is only able to see information if they log in.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+- Back End Logic - All resquests are stored in a database. This includes the player rosters and schedules - both general and for Fantasy Football.
 
-### Advanced Configuration
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+<h3>MVP 1.0 - What was accomplished and Future updates</h3>
 
-### Deployment
+All the above mentioned goals were reached, although the final product is relatively bare bones, future updates would make the website more user-oriented, rather than the database feel of the current version. 
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
 
-### `npm run build` fails to minify
+To accomplish this future updates would include:
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+User ability to customize information
+Easily accessible player stats and sports news
+Ability to add players to an individual user's Fantasy Team.
+
+
+
+<h3>The Team</h3>
+
+**Amanda L. Ragone:** 
+
+**Halon J. Hamilton:** 
+
+**Jacob Smith:** 
+
+**Mike Garringer:** 
+
+**Troy Fasnacht:** 
+
+
+<h3>Project Management</h3>
+
+[Project Board - Release Version 1.0](https://github.com/rise-shine/FFBLeagueManager/projects)
+
+
+
