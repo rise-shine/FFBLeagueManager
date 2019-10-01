@@ -33,14 +33,10 @@ https://ffbleaguemanager.herokuapp.com/
 
 4. When logged in, the user can view several generalized pages (in future updates, these pages could remain this way or be customized to suit a particular user's desired information).
 These pages include: 
-A general NFL schedule -
-(public/images/nflsched.png)
-Current NFL roster - 
-(public/images/nflrost.png)
-A mocked-up Fantasy schedule -
-(public/images/matchupmock.png)
-An example of what potential Fantasy teams would look like -
-(public/images/sample.png)
+![A general NFL schedule](public/images/nflsched.png)
+![Current NFL roster](public/images/nflrost.png)
+![A mocked-up Fantasy schedule](public/images/matchupmock.png)
+![An example of what potential Fantasy teams would look like](public/images/sample.png)
 
 5. Clicking log out will return the user to the login page.
 
@@ -48,7 +44,7 @@ An example of what potential Fantasy teams would look like -
 <h3>MVP - How the App was developed</h3>
 
 
-**Phase One - Defining MVP 1.0:** 
+**Defining MVP 1.0:** 
 Since the app was created before the start of the season, MVP was defined as being able to look up very general information. Future updates would change information as the season progresses.
 
  Layout - The website doesn't break from simple page changes and is mobile responsive.
